@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Queen.h"
 #include "Bees.h"
-const float Queen::EGG_LAYING_INTERVAL{ 1.0F / 1 };
+const float Queen::EGG_LAYING_INTERVAL{ 1.0F / TIME_SCALING };
 const float Queen::MAX_EGGS_LAID{ 125.0F };
 
 Queen::Queen(const Point& position, Hive& hive) : Bee(position, hive, QueenBee) {
