@@ -8,7 +8,6 @@ public:
 
 	void update(const double& time) override;
 	void render(Window& window) override;
-	void remove(Hive* const hive);
 	float remove(const float food);
 	float* amount();
 	

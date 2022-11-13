@@ -1,13 +1,18 @@
 #include "pch.h"
 #include "Egg.h"
+#include "Bees.h"
 const float Egg::INCUBATION_DURATION{ 24.0f * 3 / 2 };
 
 Egg::Egg(const Point& position, Hive& hive, const BeeType& type) : Bee(position, hive, EggBee) {
+	body.setFillColor(Color::Green);
+
 	hatching.restart();
 
 	this->type = type;
 
-	incubation = std::normal_distribution<float>(INCUBATION_DURATION, 12.0F / 2)(generator);
+	incubation = std::normal_distribution<float>(INCUBATION_DURATION, 12.0F / 2)(engine);
+
+	Egg::populate();
 }
 
 void Egg::update(const double& time) {
@@ -40,7 +45,7 @@ void Egg::populate() {
 		throw new std::exception("This shouldn't happen\n");
 	};
 }
-
 void Egg::hatch() {
-
+	forDeletion = true;
+	Bees::get()->spawn(position, hive, LarvaBee, type);
 }

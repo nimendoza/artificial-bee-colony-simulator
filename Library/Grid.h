@@ -15,7 +15,7 @@ private:
 public:
 	~Grid();
 
-	void update(const double& time) override;
+	void update(const double& time) override {}
 	void render(Window& window) override;
 	void toggle();
 

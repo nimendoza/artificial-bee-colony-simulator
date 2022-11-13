@@ -5,7 +5,7 @@ class Foodsources : public Base {
 private:
 	Foodsources();
 
-	static Foodsources instance;
+	static Foodsources* instance;
 public:
 	~Foodsources();
 

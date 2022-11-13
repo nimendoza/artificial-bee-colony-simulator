@@ -16,10 +16,16 @@
     <Filter Include="Input">
       <UniqueIdentifier>{98a93d80-5ec6-469e-ad2e-bb3ff87e2574}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Output">
+      <UniqueIdentifier>{a3372755-d0c1-42f0-ac25-92d5cda70233}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Map 0.txt">
       <Filter>Input</Filter>
+    </Text>
+    <Text Include="Output 0.txt">
+      <Filter>Output</Filter>
     </Text>
   </ItemGroup>
 </Project>

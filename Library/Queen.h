@@ -5,9 +5,6 @@ public:
 	explicit Queen(const Point& position, Hive& hive);
 	~Queen() = default;
 
-	void update(const double& time) override;
-	void render(Window& window) override;
-
 	static const float EGG_LAYING_INTERVAL;
 	static const float MAX_EGGS_LAID;
 protected:

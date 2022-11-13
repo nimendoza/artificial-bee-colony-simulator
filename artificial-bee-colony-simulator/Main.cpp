@@ -18,7 +18,6 @@ int main() {
 	Point camera(0, 0);
 	float zoom{ 1.00F };
 	sf::View view(sf::FloatRect(0, 0, 800, 600));
-	view.setCenter(Hives::get()->list[0]->center);
 	view.zoom(zoom);
 
 	Window window(sf::VideoMode(800, 600), "Artificial Bee Colony Simulator", sf::Style::Default);
@@ -45,10 +44,16 @@ int main() {
 	inputPath << directory << "/Utilities/Map 0.txt";
 	World::get()->generate(inputPath.str());
 
+	view.setCenter(Hives::get()->list[0]->center);
+
 	sf::Clock views; views.restart();
 	sf::Clock clock; clock.restart();
 	sf::Clock master; master.restart();
 	while (master.getElapsedTime().asSeconds() <= TICKS) {
+		if (rendering && !window.isOpen()) {
+			break;
+		}
+
 		if (running) {
 			double time = clock.restart().asSeconds();
 			Hives::get()->update(time);

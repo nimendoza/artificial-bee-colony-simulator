@@ -38,6 +38,7 @@ public:
 
 	Hive& hive;
 	BeeState state;
+	bool resting;
 protected:
 	using updateCallback = std::function<void(const double&)>;
 
@@ -68,7 +69,4 @@ protected:
 	float extractionYield;
 	float food;
 	float lifespan;
-	bool resting;
-
-	std::default_random_engine generator;
 };

@@ -6,7 +6,7 @@ private:
 
 	static Fonts* instance;
 public:
-	~Fonts();
+	~Fonts() = default;
 
 	static Fonts* get();
 

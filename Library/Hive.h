@@ -27,7 +27,7 @@ public:
 	std::map<class Foodsource* const, std::pair<float*, float>> data;
 	float food;
 private:
-	static float compute(const std::pair<float*, float> data, const float& minY, const float& maxY, const float& minD, const float maxD);
+	static float compute(const std::pair<float*, float>& data, const float& minY, const float& maxY, const float& minD, const float& maxD);
 
 	sf::RectangleShape body;
 	sf::Text text;

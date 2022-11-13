@@ -8,12 +8,13 @@ public:
 	explicit Node();
 	~Node() = default;
 
-	void update(const double& time) override;
+	void update(const double& time) override {}
 	void render(Window& window) override;
 	void setPosition(const Point& position) override;
 	void setSize(const int& size);
 	void remove(Hive* const hive);
 	void remove(Bee* const bee);
+	void remove(Foodsource* const foodsource);
 
 	bool contains(const Point& point) const;
 

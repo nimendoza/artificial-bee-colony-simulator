@@ -6,7 +6,7 @@
 const float INF(1e10);
 const float TOTAL_HOURS{ 24.0F / 2 };
 
-const float Bee::SPEED{ 400.0F * 2 };
+const float Bee::SPEED{ 100.0F * 2 };
 const float Bee::BODY_RADIUS{ 10.0F };
 const float Bee::TARGET_RADIUS{ 10.0F * 2 };
 const float Bee::HARVESTING_DURATION{ 0.1F / 2 };
@@ -31,7 +31,7 @@ const Color Bee::ALERT_COLOR{ Color::Red };
 
 Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(position, NORMAL_COLOR, ALERT_COLOR), hive{ hive }, foodsource(nullptr), body(BODY_RADIUS), face(Point(BODY_RADIUS, 2)) {
 	std::random_device device;
-	generator = std::default_random_engine(device());
+	engine = std::default_random_engine(device());
 	
 	state = Idle;
 
@@ -52,24 +52,24 @@ Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(positi
 	
 	goal = hive.center;
 	
-	speed = std::normal_distribution<float>(SPEED, 10.0F * 2)(generator);
-	harvestDuration = std::normal_distribution<float>(HARVESTING_DURATION, 0.05F / 2)(generator);
-	workDuration = std::normal_distribution<float>(WORK_DURATION, 1.0F / 2)(generator);
+	speed = std::normal_distribution<float>(SPEED, 10.0F * 2)(engine);
+	harvestDuration = std::normal_distribution<float>(HARVESTING_DURATION, 0.05F / 2)(engine);
+	workDuration = std::normal_distribution<float>(WORK_DURATION, 1.0F / 2)(engine);
 	restDuration = TOTAL_HOURS - workDuration;
-	maxEnergy = std::normal_distribution<float>(MAX_ENERGY, 20.0F)(generator);
+	maxEnergy = std::normal_distribution<float>(MAX_ENERGY, 20.0F)(engine);
 	energy = maxEnergy;
-	energyConsumptionRate = std::normal_distribution<float>(ENERGY_CONSUMPTION_RATE, 1.0F / 4)(generator);
-	fatiguePenalty = std::normal_distribution<float>(FATIGUE_PENALTY, 1.0F / 2)(generator);
-	extractionYield = std::normal_distribution<float>(EXTRACTION_YIELD, 3.0F * 2)(generator);
+	energyConsumptionRate = std::normal_distribution<float>(ENERGY_CONSUMPTION_RATE, 1.0F / 4)(engine);
+	fatiguePenalty = std::normal_distribution<float>(FATIGUE_PENALTY, 1.0F / 2)(engine);
+	extractionYield = std::normal_distribution<float>(EXTRACTION_YIELD, 3.0F * 2)(engine);
 	food = energy;
-	lifespan = std::normal_distribution<float>(LIFESPAN.at(type), 24.0F / 2)(generator);
+	lifespan = std::normal_distribution<float>(LIFESPAN.at(type), 24.0F / 2)(engine);
 
 	resting = false;
 }
 
 void Bee::update(const double& time) {
 	std::discrete_distribution<int> d{ 120000, 1 };
-	if (d(generator)) {
+	if (d(engine)) {
 		forDeletion = true;
 	}
 
@@ -79,7 +79,6 @@ void Bee::update(const double& time) {
 			state = Idle;
 		} else {
 			energy -= energyConsumptionRate * time;
-			target(hive.center);
 			state = Delivering;
 		}
 
@@ -104,6 +103,11 @@ void Bee::update(const double& time) {
 				energy += req;
 				food -= req;
 			}
+		}
+
+		if (work.getElapsedTime().asSeconds() >= workDuration) {
+			rest.restart();
+			resting = true;
 		}
 	}
 
@@ -189,26 +193,28 @@ bool Bee::hungry() const {
 	return (energy / maxEnergy) < 0.50F;
 }
 void Bee::detectCollisions() {
-	bool colliding{ false };
-	auto hives = node->hives;
-	for (auto i{ begin(hives) }; i != end(hives); i++) {
-		if (at(*i)) {
-			colliding = true;
-			break;
-		}
-	}
-
-	if (!colliding) {
-		auto food = node->food;
-		for (auto i{ begin(food) }; i != end(food); i++) {
-			if (at(*(*i))) {
+	if (node != nullptr) {
+		bool colliding{ false };
+		auto hives = node->hives;
+		for (auto i{ begin(hives) }; i != end(hives); i++) {
+			if (at(*i)) {
 				colliding = true;
 				break;
 			}
 		}
-	}
 
-	body.setOutlineColor(colliding ? ALERT_COLOR : NORMAL_COLOR);
+		if (!colliding) {
+			auto food = node->food;
+			for (auto i{ begin(food) }; i != end(food); i++) {
+				if (at(*(*i))) {
+					colliding = true;
+					break;
+				}
+			}
+		}
+
+		body.setOutlineColor(colliding ? ALERT_COLOR : NORMAL_COLOR);
+	}
 }
 void Bee::handleCollisions() {
 	auto foodSourceManager = Foodsources::get();

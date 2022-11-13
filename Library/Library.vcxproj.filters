@@ -185,5 +185,41 @@
     <ClCompile Include="Egg.cpp">
       <Filter>Entities\Bees\Egg</Filter>
     </ClCompile>
+    <ClCompile Include="Employee.cpp">
+      <Filter>Entities\Bees\Employee</Filter>
+    </ClCompile>
+    <ClCompile Include="Guard.cpp">
+      <Filter>Entities\Bees\Guard</Filter>
+    </ClCompile>
+    <ClCompile Include="Larva.cpp">
+      <Filter>Entities\Bees\Larva</Filter>
+    </ClCompile>
+    <ClCompile Include="Onlooker.cpp">
+      <Filter>Entities\Bees\Onlooker</Filter>
+    </ClCompile>
+    <ClCompile Include="Queen.cpp">
+      <Filter>Entities\Bees\Queen</Filter>
+    </ClCompile>
+    <ClCompile Include="Foodsource.cpp">
+      <Filter>Entities\Structures\Foodsource</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Entities\Structures\Node</Filter>
+    </ClCompile>
+    <ClCompile Include="Bees.cpp">
+      <Filter>Managers\Bee</Filter>
+    </ClCompile>
+    <ClCompile Include="Fonts.cpp">
+      <Filter>Managers\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="Foodsources.cpp">
+      <Filter>Managers\Foodsource</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>Managers\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Tools\World</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

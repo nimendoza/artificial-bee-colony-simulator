@@ -2,11 +2,8 @@
 #include "Bee.h"
 class Onlooker : public Bee {
 public:
-	explicit Onlooker(const Point& position);
+	explicit Onlooker(const Point& position, Hive& hive);
 	~Onlooker() = default;
-
-	void update(const double& time) override;
-	void render(Window& window) override;
 private:
 	void populate() override;
 };

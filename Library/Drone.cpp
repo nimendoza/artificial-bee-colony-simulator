@@ -2,6 +2,8 @@
 #include "Drone.h"
 Drone::Drone(const Point& position, Hive& hive) : Bee(position, hive, DroneBee) {
 	body.setFillColor(Color::Blue);
+
+	Drone::populate();
 }
 
 void Drone::populate() {
