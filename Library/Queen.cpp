@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Queen.h"
 #include "Bees.h"
-const float Queen::EGG_LAYING_INTERVAL{ 1.0F / 3 };
+const float Queen::EGG_LAYING_INTERVAL{ 1.0F / 1 };
 const float Queen::MAX_EGGS_LAID{ 125.0F };
 
 Queen::Queen(const Point& position, Hive& hive) : Bee(position, hive, QueenBee) {
@@ -18,16 +18,16 @@ void Queen::populate() {
 			laysEggs.restart();
 
 			for (int i{ hive.count[OnlookerBee] }; i < 90; i++) {
-				Bees::get()->spawn(position, hive, EggBee, OnlookerBee);
+				Bees::get()->spawn(position, hive, OnlookerBee);
 			}
 			for (int i{ hive.count[EmployeeBee] }; i < 10; i++) {
-				Bees::get()->spawn(position, hive, EggBee, EmployeeBee);
+				Bees::get()->spawn(position, hive, EmployeeBee);
 			}
 			for (int i{ hive.count[DroneBee] }; i < 1; i++) {
-				Bees::get()->spawn(position, hive, EggBee, DroneBee);
+				Bees::get()->spawn(position, hive, DroneBee);
 			}
 			for (int i{ hive.count[GuardBee] }; i < 20; i++) {
-				Bees::get()->spawn(position, hive, EggBee, GuardBee);
+				Bees::get()->spawn(position, hive, GuardBee);
 			}
 
 			if (forDeletion) {

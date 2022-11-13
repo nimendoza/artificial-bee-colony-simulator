@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Egg.h"
 #include "Bees.h"
-const float Egg::INCUBATION_DURATION{ 24.0f * 3 / 3 };
+const float Egg::INCUBATION_DURATION{ 24.0f * 1 / 1 };
 
 Egg::Egg(const Point& position, Hive& hive, const BeeType& type) : Bee(position, hive, EggBee) {
 	body.setFillColor(Color::Green);
@@ -10,7 +10,7 @@ Egg::Egg(const Point& position, Hive& hive, const BeeType& type) : Bee(position,
 
 	this->type = type;
 
-	incubation = std::normal_distribution<float>(INCUBATION_DURATION, 12.0F / 3)(engine);
+	incubation = std::normal_distribution<float>(INCUBATION_DURATION, 12.0F / 1)(engine);
 
 	Egg::populate();
 }

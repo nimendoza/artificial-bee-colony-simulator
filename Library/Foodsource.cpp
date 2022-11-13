@@ -5,7 +5,7 @@
 #include "Fonts.h"
 const float Foodsource::WIDHT{ 200.0F };
 const float Foodsource::HEIGHT{ 200.0F };
-const float Foodsource::REGENERATION_TIME{ 24.0F / 3 };
+const float Foodsource::REGENERATION_TIME{ 24.0F / 1 };
 const float Foodsource::DETECTION_RADIUS{ 400.0F };
 const float Foodsource::MAX_FOOD_AMOUNT{ 10000.0F };
 
