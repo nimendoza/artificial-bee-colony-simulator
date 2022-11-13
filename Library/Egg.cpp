@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Egg.h"
 #include "Bees.h"
-const float Egg::INCUBATION_DURATION{ 24.0f * 3 / 1 };
+const float Egg::INCUBATION_DURATION{ 24.0f * 3 / 3 };
 
 Egg::Egg(const Point& position, Hive& hive, const BeeType& type) : Bee(position, hive, EggBee) {
 	body.setFillColor(Color::Green);
@@ -10,7 +10,7 @@ Egg::Egg(const Point& position, Hive& hive, const BeeType& type) : Bee(position,
 
 	this->type = type;
 
-	incubation = std::normal_distribution<float>(INCUBATION_DURATION, 12.0F / 1)(engine);
+	incubation = std::normal_distribution<float>(INCUBATION_DURATION, 12.0F / 3)(engine);
 
 	Egg::populate();
 }
@@ -26,23 +26,23 @@ void Egg::populate() {
 	};
 
 	updateWhen[Scouting] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Travelling] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Harvesting] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Delivering] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Depositing] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 }
 void Egg::hatch() {

@@ -3,7 +3,7 @@
 #include "Bees.h"
 #include "Foodsources.h"
 #include "Grid.h"
-const int TICKS(24 * 30 * 3 / 1);
+const int TICKS(24 * 30 * 3 / 3);
 const float CAMERA_SPEED{ 300.0F };
 
 int main() {

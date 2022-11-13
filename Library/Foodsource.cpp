@@ -5,11 +5,11 @@
 #include "Fonts.h"
 const float Foodsource::WIDHT{ 200.0F };
 const float Foodsource::HEIGHT{ 200.0F };
-const float Foodsource::REGENERATION_TIME{ 24.0F / 1 };
+const float Foodsource::REGENERATION_TIME{ 24.0F / 3 };
 const float Foodsource::DETECTION_RADIUS{ 400.0F };
-const float Foodsource::MAX_FOOD_AMOUNT{ 1000.0F };
+const float Foodsource::MAX_FOOD_AMOUNT{ 10000.0F };
 
-Foodsource::Foodsource(const Point& position) : Entity(position, Color::White, Color::Green), dimensions(WIDHT, HEIGHT), body(dimensions), food{ MAX_FOOD_AMOUNT }, text(), center(position.x + WIDHT / 2.0F, position.y + HEIGHT / 2.0F) {
+Foodsource::Foodsource(const Point& position) : Entity(position, Color::White, Color::Green), dimensions(WIDHT, HEIGHT), body(dimensions), food{ MAX_FOOD_AMOUNT }, text(), center(position.x + WIDHT / float(2), position.y + HEIGHT / float(2)) {
 	body.setPosition(position);
 	body.setOutlineThickness(-10);
 	body.setOutlineColor(outline);

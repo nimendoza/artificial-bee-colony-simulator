@@ -1,9 +1,9 @@
 #include "pch.h"
 #include "Larva.h"
 #include "Bees.h"
-const float Larva::EMERGE_TIME_QUEEN{ 24 * 16.0F / 1 };
-const float Larva::EMERGE_TIME_DRONE{ 24 * 24.0F / 1 };
-const float Larva::EMERGE_TIME_WORKER{ 24 * 21.0F / 1 };
+const float Larva::EMERGE_TIME_QUEEN{ 24 * 16.0F / 3 };
+const float Larva::EMERGE_TIME_DRONE{ 24 * 24.0F / 3 };
+const float Larva::EMERGE_TIME_WORKER{ 24 * 21.0F / 3 };
 
 Larva::Larva(const Point& position, Hive& hive, const BeeType& type) : Bee(position, hive, LarvaBee), type{ type } {
 	body.setFillColor(Color::White);
@@ -36,23 +36,23 @@ void Larva::populate() {
 	};
 
 	updateWhen[Scouting] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Travelling] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Harvesting] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Delivering] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Depositing] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 }
 void Larva::develop() {

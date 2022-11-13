@@ -1,8 +1,8 @@
 #include "pch.h"
 #include "Queen.h"
 #include "Bees.h"
-const float Queen::EGG_LAYING_INTERVAL{ 1.0F / 1 };
-const float Queen::MAX_EGGS_LAID{ 125.0F * 1 };
+const float Queen::EGG_LAYING_INTERVAL{ 1.0F / 3 };
+const float Queen::MAX_EGGS_LAID{ 125.0F };
 
 Queen::Queen(const Point& position, Hive& hive) : Bee(position, hive, QueenBee) {
 	body.setFillColor(Color::Magenta);
@@ -57,22 +57,22 @@ void Queen::populate() {
 	};
 
 	updateWhen[Scouting] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Travelling] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Harvesting] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Delivering] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Depositing] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 }

@@ -6,9 +6,9 @@
 #include "Onlooker.h"
 const float Hive::WIDTH{ 200.0F };
 const float Hive::HEIGHT{ 200.0F };
-const float Hive::DANCE_DURATION{ 0.05F / 1 };
+const float Hive::DANCE_DURATION{ 0.05F / 3 };
 
-Hive::Hive(const Point& position) : Entity(position, Color::White, Color::Yellow), dimensions(WIDTH, HEIGHT), body(dimensions), food{}, count{}, idles{}, data{}, text(), center(position.x + WIDTH / 2.0F, position.y + HEIGHT / 2.0F), dancing(false) {
+Hive::Hive(const Point& position) : Entity(position, Color::White, Color::Yellow), dimensions(WIDTH, HEIGHT), body(dimensions), food{}, count{}, idles{}, data{}, text(), center(position.x + WIDTH / float(2), position.y + HEIGHT / float(2)), dancing(false) {
 	body.setPosition(position);
 	body.setOutlineThickness(-10);
 	body.setOutlineColor(outline);
@@ -20,7 +20,7 @@ Hive::Hive(const Point& position) : Entity(position, Color::White, Color::Yellow
 }
 
 void Hive::update(const double& time) {
-	if (dancing && danceTimer.getElapsedTime().asSeconds() > DANCE_DURATION) {
+	if (dancing && danceTimer.getElapsedTime().asSeconds() > DANCE_DURATION && data.size()) {
 		std::vector<std::pair<Foodsource*, float>> weights{};
 		float sum{};
 		float minY{ *begin(data)->second.first };
@@ -78,8 +78,10 @@ void Hive::update(const double& time) {
 	}
 }
 void Hive::dance() {
-	dancing = true;
-	danceTimer.restart();
+	if (data.size()) {
+		dancing = true;
+		danceTimer.restart();
+	}
 }
 float Hive::compute(const std::pair<float*, float>& foodData,
 	const float& minYield, const float& maxYield,
@@ -96,13 +98,13 @@ float Hive::compute(const std::pair<float*, float>& foodData,
 		result = 1.0f;
 	} else if (yieldRange == 0.0f)
 	{	// We apply uniform yield weight and compute distance
-		result = ((1.0f) + (offsetFromMaxDistance / distanceRange)) / 1.0f;
+		result = ((1.0f) + (offsetFromMaxDistance / distanceRange)) / 3.0f;
 	} else if (distanceRange == 0.0f)
 	{	// We apply uniform distance weight and compute yield
-		result = ((offsetFromMinYield / yieldRange) + (1.0f) / 1.0f);
+		result = ((offsetFromMinYield / yieldRange) + (1.0f) / 3.0f);
 	} else
 	{	// We have two valid values
-		result = ((offsetFromMinYield / yieldRange) + (offsetFromMaxDistance / distanceRange)) / 1.0f;
+		result = ((offsetFromMinYield / yieldRange) + (offsetFromMaxDistance / distanceRange)) / 3.0f;
 	}
 	return result;
 }

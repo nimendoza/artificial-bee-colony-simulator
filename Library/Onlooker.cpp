@@ -15,7 +15,7 @@ void Onlooker::populate() {
 	};
 
 	updateWhen[Scouting] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Travelling] = [&](const double& time) {

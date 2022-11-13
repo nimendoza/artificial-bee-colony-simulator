@@ -12,22 +12,22 @@ void Guard::populate() {
 	};
 
 	updateWhen[Scouting] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Travelling] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Harvesting] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Delivering] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 
 	updateWhen[Depositing] = [&](const double& time) {
-		throw new std::exception("This shouldn't happen\n");
+		state = Idle;
 	};
 }
