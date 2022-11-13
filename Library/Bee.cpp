@@ -4,24 +4,25 @@
 #include "Grid.h"
 #include "Foodsources.h"
 const float INF(1e10);
-const float TOTAL_HOURS{ 24.0F / 2 };
+const float TOTAL_HOURS{ 24.0F / 1 };
 
-const float Bee::SPEED{ 100.0F * 2 };
+const float Bee::CARRYING_CAPACITY{ 10.0F * 1 };
+const float Bee::SPEED{ 100.0F * 1 };
 const float Bee::BODY_RADIUS{ 10.0F };
-const float Bee::TARGET_RADIUS{ 10.0F * 2 };
-const float Bee::HARVESTING_DURATION{ 0.1F / 2 };
-const float Bee::WORK_DURATION{ 16.0F / 2 };
-const float Bee::REST_DURATION{ 8.0F / 2 };
-const float Bee::EXTRACTION_YIELD{ 10.0F * 2 };
+const float Bee::TARGET_RADIUS{ 10.0F * 1 };
+const float Bee::HARVESTING_DURATION{ 0.1F / 1 };
+const float Bee::WORK_DURATION{ 16.0F / 1 };
+const float Bee::REST_DURATION{ 8.0F / 1 };
+const float Bee::EXTRACTION_YIELD{ 10.0F * 1 };
 const float Bee::MAX_ENERGY{ 100.0F };
-const float Bee::FATIGUE_PENALTY{ 1.0F * 2 };
-const float Bee::ENERGY_CONSUMPTION_RATE{ 1.0F * 2 };
+const float Bee::FATIGUE_PENALTY{ 1.0F * 1 };
+const float Bee::ENERGY_CONSUMPTION_RATE{ 1.0F * 1 };
 const std::map<const BeeType, float> Bee::LIFESPAN{
-	{OnlookerBee, 24.0F * 42 / 2},
-	{EmployeeBee, 24.0F * 42 / 2},
-	{DroneBee, 24.0F * 20 * 3 / 2},
-	{GuardBee, 24.0F * 42 / 2},
-	{QueenBee, 24 * 30 * 24.0F / 2},
+	{OnlookerBee, 24.0F * 42 / 1},
+	{EmployeeBee, 24.0F * 42 / 1},
+	{DroneBee, 24.0F * 20 * 3 / 1},
+	{GuardBee, 24.0F * 42 / 1},
+	{QueenBee, 24 * 30 * 24.0F / 1},
 	{LarvaBee, INF},
 	{EggBee, INF}
 };
@@ -52,17 +53,17 @@ Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(positi
 	
 	goal = hive.center;
 	
-	speed = std::normal_distribution<float>(SPEED, 10.0F * 2)(engine);
-	harvestDuration = std::normal_distribution<float>(HARVESTING_DURATION, 0.05F / 2)(engine);
-	workDuration = std::normal_distribution<float>(WORK_DURATION, 1.0F / 2)(engine);
+	speed = std::normal_distribution<float>(SPEED, 10.0F * 1)(engine);
+	harvestDuration = std::normal_distribution<float>(HARVESTING_DURATION, 0.05F / 1)(engine);
+	workDuration = std::normal_distribution<float>(WORK_DURATION, 1.0F / 1)(engine);
 	restDuration = TOTAL_HOURS - workDuration;
 	maxEnergy = std::normal_distribution<float>(MAX_ENERGY, 20.0F)(engine);
 	energy = maxEnergy;
-	energyConsumptionRate = std::normal_distribution<float>(ENERGY_CONSUMPTION_RATE, 1.0F / 4)(engine);
-	fatiguePenalty = std::normal_distribution<float>(FATIGUE_PENALTY, 1.0F / 2)(engine);
-	extractionYield = std::normal_distribution<float>(EXTRACTION_YIELD, 3.0F * 2)(engine);
+	energyConsumptionRate = std::normal_distribution<float>(ENERGY_CONSUMPTION_RATE, 1.0F / 2.0F)(engine);
+	fatiguePenalty = std::normal_distribution<float>(FATIGUE_PENALTY, 1.0F / 1)(engine);
+	extractionYield = std::normal_distribution<float>(EXTRACTION_YIELD, 3.0F * 1)(engine);
 	food = energy;
-	lifespan = std::normal_distribution<float>(LIFESPAN.at(type), 24.0F / 2)(engine);
+	lifespan = std::normal_distribution<float>(LIFESPAN.at(type), 24.0F / 1)(engine);
 
 	resting = false;
 }

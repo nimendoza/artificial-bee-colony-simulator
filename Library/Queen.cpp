@@ -1,8 +1,8 @@
 #include "pch.h"
 #include "Queen.h"
 #include "Bees.h"
-const float Queen::EGG_LAYING_INTERVAL{ 1.0F / 2 };
-const float Queen::MAX_EGGS_LAID{ 125.0F * 2 };
+const float Queen::EGG_LAYING_INTERVAL{ 1.0F / 1 };
+const float Queen::MAX_EGGS_LAID{ 125.0F * 1 };
 
 Queen::Queen(const Point& position, Hive& hive) : Bee(position, hive, QueenBee) {
 	body.setFillColor(Color::Magenta);

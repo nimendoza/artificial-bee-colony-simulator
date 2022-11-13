@@ -2,7 +2,7 @@
 #include "Grid.h"
 Grid* Grid::instance = nullptr;
 
-Grid::Grid() : gridSize(50), nodeSize(2000), origin(-(gridSize / 2 * nodeSize), -(gridSize / 2 * nodeSize)), visible(false) {
+Grid::Grid() : gridSize(50), nodeSize(2000), origin(-(gridSize / int(2) * nodeSize), -(gridSize / int(2) * nodeSize)), visible(false) {
 	nodes = new Node * [gridSize];
 	for (int i{}; i < gridSize; i++) {
 		nodes[i] = new Node[gridSize];

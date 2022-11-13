@@ -21,6 +21,7 @@ public:
 	bool near(const Foodsource& foodsource) const;
 	bool hungry() const;
 
+	const static float CARRYING_CAPACITY;
 	const static float SPEED;
 	const static float BODY_RADIUS;
 	const static float TARGET_RADIUS;

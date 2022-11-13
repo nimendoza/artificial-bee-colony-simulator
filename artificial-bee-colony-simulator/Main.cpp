@@ -3,13 +3,13 @@
 #include "Bees.h"
 #include "Foodsources.h"
 #include "Grid.h"
-const int TICKS(24 * 30 * 3 / 2);
+const int TICKS(24 * 30 * 3 / 1);
 const float CAMERA_SPEED{ 300.0F };
 
 int main() {
 	// TOGGLE FROM DEBUG TO RELEASE
 
-	bool rendering = true;
+	bool rendering = false;
 	bool running = true;
 
 	sf::ContextSettings settings;

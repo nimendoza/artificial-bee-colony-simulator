@@ -2,6 +2,9 @@
 #include "Onlooker.h"
 Onlooker::Onlooker(const Point& point, Hive& hive) : Bee(position, hive, OnlookerBee) {
 	hive.add(this);
+	setPosition(hive.center);
+
+	state = Idle;
 
 	Onlooker::populate();
 }
@@ -32,7 +35,14 @@ void Onlooker::populate() {
 
 	updateWhen[Harvesting] = [&](const double& time) {
 		if (harvestTimer.getElapsedTime().asSeconds() >= harvestDuration) {
-			harvest(foodsource->remove(extractionYield));
+			if (food > CARRYING_CAPACITY) {
+				updateWhen[Delivering](time);
+			} else if (extractionYield + food > CARRYING_CAPACITY) {
+				float f = extractionYield - food + CARRYING_CAPACITY;
+				harvest(foodsource->remove(f));
+			} else {
+				harvest(foodsource->remove(extractionYield));
+			}
 			state = Delivering;
 		}
 	};
