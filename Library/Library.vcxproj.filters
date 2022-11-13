@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Entities">
+      <UniqueIdentifier>{d2b78119-256a-4c3e-be3f-bee84332f5bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Bees">
+      <UniqueIdentifier>{7b424a9b-9b56-4cdc-852d-1706394e3a46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Bees\Bee">
+      <UniqueIdentifier>{a1f692e5-cd6a-4ac8-b8b3-7d04c1abd06b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Bees\Drone">
+      <UniqueIdentifier>{15ffd97d-01e8-4e7a-8342-0a285f7a298c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Bees\Employee">
+      <UniqueIdentifier>{f954dd4a-16c7-4003-92f4-55ffd00d819c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Bees\Guard">
+      <UniqueIdentifier>{4244d379-6266-4117-baee-f4604a8504fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Bees\Larva">
+      <UniqueIdentifier>{9b5a2e9b-349a-44ea-bbcc-277aee81fb27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Bees\Onlooker">
+      <UniqueIdentifier>{ee71ffcf-f1a1-48a8-b84f-90531d6a8ba5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Bees\Egg">
+      <UniqueIdentifier>{e3abc9a8-0013-43ba-8680-49f570dc5c77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Bees\Queen">
+      <UniqueIdentifier>{7f98ad28-c911-46c1-9109-93dd92c3fca8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Entity">
+      <UniqueIdentifier>{8e0d6be8-e215-4def-80e3-b83b1f37996b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Structures">
+      <UniqueIdentifier>{9c034f52-8fa8-4265-88bf-a88c963f64a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Structures\Foodsource">
+      <UniqueIdentifier>{308d2147-3c00-443b-9583-b92b7c34c81a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Structures\Hive">
+      <UniqueIdentifier>{1d8607a8-1e35-453f-a596-7e5bf8220066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Wasp">
+      <UniqueIdentifier>{4a7513ca-35c4-4d2c-92c2-465a9cc6f12c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers">
+      <UniqueIdentifier>{d7371109-0c12-4070-8f88-12fbd1417cb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{1d9418c9-84ab-4f76-bb13-749c5d45a7c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Base">
+      <UniqueIdentifier>{e6747acc-de42-4eee-8497-1eb074278bdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\Enums">
+      <UniqueIdentifier>{c61cf8f8-8e73-4e9e-a973-077991d488bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers\Hive">
+      <UniqueIdentifier>{384cf7d1-0501-41b2-8915-a0553317236f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Structures\Node">
+      <UniqueIdentifier>{6b9dca46-02c8-4d70-9e02-5ca49e81c0dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers\Grid">
+      <UniqueIdentifier>{0e064760-2f5e-40b6-bec8-f504fb517c0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers\Foodsource">
+      <UniqueIdentifier>{51cb56f3-ee93-4148-ae3c-32b444dea0c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers\Bee">
+      <UniqueIdentifier>{3f941908-fbc4-4818-8b71-1bb1b9fac3ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\World">
+      <UniqueIdentifier>{a4ae8024-2451-4067-8e45-549c2152c9b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers\Font">
+      <UniqueIdentifier>{292e05de-86ad-4f71-a9c9-1ec2a30ced0d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Base.h">
+      <Filter>Entities\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Entities\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Hive.h">
+      <Filter>Entities\Structures\Hive</Filter>
+    </ClInclude>
+    <ClInclude Include="BeeType.h">
+      <Filter>Tools\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Hives.h">
+      <Filter>Managers\Hive</Filter>
+    </ClInclude>
+    <ClInclude Include="Foodsource.h">
+      <Filter>Entities\Structures\Foodsource</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Entities\Structures\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="Bee.h">
+      <Filter>Entities\Bees\Bee</Filter>
+    </ClInclude>
+    <ClInclude Include="BeeState.h">
+      <Filter>Tools\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Wasp.h">
+      <Filter>Entities\Wasp</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Managers\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="Foodsources.h">
+      <Filter>Managers\Foodsource</Filter>
+    </ClInclude>
+    <ClInclude Include="Employee.h">
+      <Filter>Entities\Bees\Employee</Filter>
+    </ClInclude>
+    <ClInclude Include="Drone.h">
+      <Filter>Entities\Bees\Drone</Filter>
+    </ClInclude>
+    <ClInclude Include="Bees.h">
+      <Filter>Managers\Bee</Filter>
+    </ClInclude>
+    <ClInclude Include="Larva.h">
+      <Filter>Entities\Bees\Larva</Filter>
+    </ClInclude>
+    <ClInclude Include="Queen.h">
+      <Filter>Entities\Bees\Queen</Filter>
+    </ClInclude>
+    <ClInclude Include="Egg.h">
+      <Filter>Entities\Bees\Egg</Filter>
+    </ClInclude>
+    <ClInclude Include="Onlooker.h">
+      <Filter>Entities\Bees\Onlooker</Filter>
+    </ClInclude>
+    <ClInclude Include="Guard.h">
+      <Filter>Entities\Bees\Guard</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Tools\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Fonts.h">
+      <Filter>Managers\Font</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Entities\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Hive.cpp">
+      <Filter>Entities\Structures\Hive</Filter>
+    </ClCompile>
+    <ClCompile Include="Hives.cpp">
+      <Filter>Managers\Hive</Filter>
+    </ClCompile>
+    <ClCompile Include="Bee.cpp">
+      <Filter>Entities\Bees\Bee</Filter>
+    </ClCompile>
+    <ClCompile Include="Drone.cpp">
+      <Filter>Entities\Bees\Drone</Filter>
+    </ClCompile>
+    <ClCompile Include="Egg.cpp">
+      <Filter>Entities\Bees\Egg</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

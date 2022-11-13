@@ -1,0 +1,12 @@
+﻿  pch.cpp
+  Bee.cpp
+C:\Users\Owner\OneDrive\Documents\Programming\artificial-bee-colony-simulator\Library\Bee.cpp(78,36): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\artificial-bee-colony-simulator\Library\Bee.cpp(81,36): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\artificial-bee-colony-simulator\Library\Bee.cpp(91,35): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+  Drone.cpp
+  Egg.cpp
+  Entity.cpp
+  Hive.cpp
+  Hives.cpp
+  Generating Code...
+  Library.vcxproj -> C:\Users\Owner\OneDrive\Documents\Programming\artificial-bee-colony-simulator\x64\Release\Library.lib

@@ -1,0 +1,7 @@
+﻿  Main.cpp
+D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xmemory(154,5): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xmemory(164,5): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\atomic(93,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\atomic(300,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\atomic(316,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Users\Owner\OneDrive\Documents\Programming\artificial-bee-colony-simulator\Library\pch.h(20,10): fatal  error C1083: Cannot open include file: 'SFML/System.hpp': No such file or directory

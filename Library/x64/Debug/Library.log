@@ -1,0 +1,5 @@
+﻿  pch.cpp
+  INTERNAL COMPILER ERROR in 'D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\bin\HostX64\x64\CL.exe'
+      Please choose the Technical Support command on the Visual C++
+      Help menu, or open the Technical Support help file for more information
+D:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(563,5): error MSB6006: "CL.exe" exited with code -1073741819.
