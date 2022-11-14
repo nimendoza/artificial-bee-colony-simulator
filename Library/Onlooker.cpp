@@ -1,8 +1,6 @@
 #include "pch.h"
 #include "Onlooker.h"
 
-double pesticide_chance = 0;
-
 Onlooker::Onlooker(const Point& point, Hive& hive) : Bee(position, hive, OnlookerBee) {
 	hive.add(this);
 	setPosition(hive.center);

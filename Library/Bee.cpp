@@ -6,6 +6,7 @@
 const float INF(1e10);
 const float TOTAL_HOURS{ 24.0F / TIME_SCALING };
 
+const double Bee::pesticide_chance = 0;
 const float Bee::CARRYING_CAPACITY{ 10.0F };
 const float Bee::SPEED{ 100.0F * TIME_SCALING };
 const float Bee::BODY_RADIUS{ 5.0F };

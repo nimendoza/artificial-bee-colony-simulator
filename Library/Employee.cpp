@@ -2,8 +2,6 @@
 #include "Employee.h"
 #include "Foodsources.h"
 
-double pesticide_chance = 0;
-
 Employee::Employee(const Point& position, Hive& hive) : Bee(position, hive, EmployeeBee), data{} {
 	state = Scouting;
 	
