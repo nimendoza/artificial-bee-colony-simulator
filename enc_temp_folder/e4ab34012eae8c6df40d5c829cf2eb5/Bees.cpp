@@ -22,8 +22,8 @@ Bees::~Bees() {
 
 void Bees::update(const double& deltaTime) {
 	for (auto i{ begin(list) }; i != end(list); i++) {
-		for (int j{}; j < i->second.size(); j++) {
-			i->second[j]->update(deltaTime);
+		for (auto j{ begin(i->second) }; i->second.size() && j != end(i->second); j++) {
+			(*j)->update(deltaTime);
 		}
 	}
 

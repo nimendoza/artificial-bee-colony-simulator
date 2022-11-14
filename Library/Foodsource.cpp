@@ -3,8 +3,8 @@
 #include "Node.h"
 #include "Grid.h"
 #include "Fonts.h"
-const float Foodsource::WIDHT{ 10.0F };
-const float Foodsource::HEIGHT{ 10.0F };
+const float Foodsource::WIDHT{ 100.0F };
+const float Foodsource::HEIGHT{ 100.0F };
 const float Foodsource::REGENERATION_TIME{ 24.0F / TIME_SCALING };
 const float Foodsource::DETECTION_RADIUS{ 400.0F };
 const float Foodsource::MAX_FOOD_AMOUNT{ 50.0F };
