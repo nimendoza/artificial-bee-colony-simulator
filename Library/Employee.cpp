@@ -70,7 +70,7 @@ void Employee::populate() {
 	};
 
 	updateWhen[Harvesting] = [&](const double& time) {
-		std::discrete_distribution<int> poison{ 100 - pesticide_chance, pesticide_chance * pow(0.5, time / 40) };
+		std::discrete_distribution<int> poison{ 100 - pesticide_chance, pesticide_chance * pow(0.5, (int(time) % 40) / 40) };
 		if (poison(engine)) {
 			std::cout << "A bee died to pesticides\n";
 			forDeletion = true;

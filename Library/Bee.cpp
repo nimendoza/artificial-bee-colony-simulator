@@ -68,7 +68,7 @@ Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(positi
 	fatiguePenalty = std::normal_distribution<float>(FATIGUE_PENALTY, 1.0F / TIME_SCALING)(engine);
 	extractionYield = std::normal_distribution<float>(EXTRACTION_YIELD, 3.0F * TIME_SCALING)(engine);
 	food = 0;
-	lifespan = 1 * std::normal_distribution<float>((LIFESPAN.at(type) / std::discrete_distribution<int>{0, 100, infection_chance}(engine)), 24.0F / TIME_SCALING)(engine);
+	lifespan = 1 * std::normal_distribution<float>((LIFESPAN.at(type) / std::discrete_distribution<int>{0, 100 - infection_chance, infection_chance}(engine)), 24.0F / TIME_SCALING)(engine);
 	resting = false;
 }//SHORTENED LIFESPAN
 
