@@ -1,6 +1,9 @@
 #include "pch.h"
 #include "Employee.h"
 #include "Foodsources.h"
+
+double pesticide_chance = 30;
+
 Employee::Employee(const Point& position, Hive& hive) : Bee(position, hive, EmployeeBee), data{} {
 	state = Scouting;
 	
@@ -63,6 +66,13 @@ void Employee::populate() {
 
 	updateWhen[Harvesting] = [&](const double& time) {
 		harvestTimer += time;
+		
+		std::discrete_distribution<int> poison{ 70, pesticide_chance * pow(0.5, time / 40) };
+		if (poison(engine)) {
+			std::cout << "A bee died to pesticides\n";
+			forDeletion = true;
+		}
+
 		if (harvestTimer >= harvestDuration) {
 			if (food > CARRYING_CAPACITY) {
 				updateWhen[Delivering](time);

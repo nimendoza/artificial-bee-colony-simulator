@@ -1,5 +1,8 @@
 #include "pch.h"
 #include "Onlooker.h"
+
+double pesticide_chance = 30;
+
 Onlooker::Onlooker(const Point& point, Hive& hive) : Bee(position, hive, OnlookerBee) {
 	hive.add(this);
 	setPosition(hive.center);
@@ -42,6 +45,13 @@ void Onlooker::populate() {
 	updateWhen[Harvesting] = [&](const double& time) {
 		harvestTimer += time;
 		if (harvestTimer >= harvestDuration) {
+
+			std::discrete_distribution<int> poison{ 70, pesticide_chance * pow(0.5, time/40) };
+			if (poison(engine)) {
+				std::cout << "A bee died to pesticides\n";
+				forDeletion = true;
+			}
+
 			if (food > CARRYING_CAPACITY) {
 				updateWhen[Delivering](time);
 			} else if (extractionYield + food > CARRYING_CAPACITY) {
