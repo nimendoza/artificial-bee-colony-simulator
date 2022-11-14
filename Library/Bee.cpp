@@ -71,7 +71,7 @@ Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(positi
 }
 
 void Bee::update(const double& time) {
-	std::discrete_distribution<int> d{ 120000, 1 };
+	std::discrete_distribution<int> d{10000, 5};
 	if (d(engine)) {
 		forDeletion = true;
 	}
