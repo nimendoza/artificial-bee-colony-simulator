@@ -3,6 +3,8 @@
 Guard::Guard(const Point& position, Hive& hive) : Bee(position, hive, GuardBee) {
 	body.setFillColor(Color::Black);
 
+	hive.guards.push_back(this);
+
 	Guard::populate();
 }
 

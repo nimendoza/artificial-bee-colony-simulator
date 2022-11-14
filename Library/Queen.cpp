@@ -7,15 +7,16 @@ const float Queen::MAX_EGGS_LAID{ 3000.0F };
 Queen::Queen(const Point& position, Hive& hive) : Bee(position, hive, QueenBee) {
 	body.setFillColor(Color::Magenta);
 	
-	laysEggs.restart();
+	laysEggs = 0;
 
 	Queen::populate();
 }
 
 void Queen::populate() {
 	updateWhen[Idle] = [&](const double& time) {
-		if (laysEggs.getElapsedTime().asSeconds() >= EGG_LAYING_INTERVAL) {
-			laysEggs.restart();
+		laysEggs += time;
+		if (laysEggs >= EGG_LAYING_INTERVAL) {
+			laysEggs = 0;
 
 			for (int i{ hive.count[OnlookerBee] }; i < 90; i++) {
 				Bees::get()->spawn(position, hive, OnlookerBee);

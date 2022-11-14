@@ -46,10 +46,10 @@ Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(positi
 	face.setOutlineColor(NORMAL_COLOR);
 	face.setPosition(position - Point(0, BODY_RADIUS));
 
-	harvestTimer.restart();
-	rest.restart();
-	work.restart();
-	life.restart();
+	harvestTimer = 0;
+	rest = 0;
+	work = 0;
+	life = 0;
 	
 	goal = hive.center;
 	
@@ -83,8 +83,9 @@ void Bee::update(const double& time) {
 			state = Delivering;
 		}
 
-		if (rest.getElapsedTime().asSeconds() >= restDuration) {
-			work.restart();
+		rest += time;
+		if (rest >= restDuration) {
+			work = 0;
 			resting = false;
 		}
 	} else {
@@ -106,8 +107,9 @@ void Bee::update(const double& time) {
 			}
 		}
 
-		if (work.getElapsedTime().asSeconds() >= workDuration) {
-			rest.restart();
+		work += time;
+		if (work >= workDuration) {
+			rest = 0;
 			resting = true;
 		}
 	}
@@ -117,7 +119,8 @@ void Bee::update(const double& time) {
 		energy = maxEnergy;
 	}
 
-	if (life.getElapsedTime().asSeconds() >= lifespan) {
+	life += time;
+	if (life >= lifespan) {
 		forDeletion = true;
 	}
 

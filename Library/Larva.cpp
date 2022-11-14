@@ -10,7 +10,7 @@ Larva::Larva(const Point& position, Hive& hive, const BeeType& type) : Bee(posit
 
 	energyConsumptionRate /= 2;
 
-	emerge.restart();
+	emerge = 0;
 	switch (type) {
 	case QueenBee:
 		emergesIn = EMERGE_TIME_QUEEN;
@@ -30,28 +30,34 @@ Larva::Larva(const Point& position, Hive& hive, const BeeType& type) : Bee(posit
 
 void Larva::populate() {
 	updateWhen[Idle] = [&](const double& time) {
-		if (emerge.getElapsedTime().asSeconds() >= emergesIn) {
+		emerge += time;
+		if (emerge >= emergesIn) {
 			develop();
 		}
 	};
 
 	updateWhen[Scouting] = [&](const double& time) {
+		emerge += time;
 		state = Idle;
 	};
 
 	updateWhen[Travelling] = [&](const double& time) {
+		emerge += time;
 		state = Idle;
 	};
 
 	updateWhen[Harvesting] = [&](const double& time) {
+		emerge += time;
 		state = Idle;
 	};
 
 	updateWhen[Delivering] = [&](const double& time) {
+		emerge += time;
 		state = Idle;
 	};
 
 	updateWhen[Depositing] = [&](const double& time) {
+		emerge += time;
 		state = Idle;
 	};
 }

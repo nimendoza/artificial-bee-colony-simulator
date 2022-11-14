@@ -7,8 +7,11 @@
 const float Hive::WIDTH{ 10.0F };
 const float Hive::HEIGHT{ 10.0F };
 const float Hive::DANCE_DURATION{ 0.05F / TIME_SCALING };
+const float Hive::NO_ATTACK_CHANCE{ 12000 / TIME_SCALING };
+const float Hive::FOOD_PENALTY{ 0.90F };
+const int Hive::GUARD_PENALTY{ 10 };
 
-Hive::Hive(const Point& position) : Entity(position, Color::White, Color::Yellow), dimensions(WIDTH, HEIGHT), body(dimensions), food{}, count{}, idles{}, data{}, text(), center(position.x + WIDTH / float(2), position.y + HEIGHT / float(2)), dancing(false) {
+Hive::Hive(const Point& position) : Entity(position, Color::White, Color::Yellow), guards{}, dimensions(WIDTH, HEIGHT), body(dimensions), food{}, count{}, idles{}, data{}, text(), center(position.x + WIDTH / float(2), position.y + HEIGHT / float(2)), dancing(false) {
 	body.setPosition(position);
 	body.setOutlineThickness(-1);
 	body.setOutlineColor(outline);
@@ -20,7 +23,10 @@ Hive::Hive(const Point& position) : Entity(position, Color::White, Color::Yellow
 }
 
 void Hive::update(const double& time) {
-	if (dancing && danceTimer.getElapsedTime().asSeconds() > DANCE_DURATION) {
+	if (dancing) {
+		danceTimer += time;
+	}
+	if (dancing && danceTimer > DANCE_DURATION) {
 		std::vector<std::pair<Foodsource*, float>> weights{};
 		float sum{};
 		float minY{ *begin(data)->second.first };
@@ -67,6 +73,18 @@ void Hive::update(const double& time) {
 		dancing = false;
 	}
 
+	std::discrete_distribution<int> attack{ NO_ATTACK_CHANCE, 1 };
+	if (attack(engine)) {
+		std::cout << "An attack happened!\n";
+
+		food *= FOOD_PENALTY;
+
+		int count = GUARD_PENALTY;
+		for (auto i{ begin(guards) }; i != end(guards) && count; count--, i++) {
+			(*i)->forDeletion = true;
+		}
+	}
+
 	if (node != nullptr && !node->contains(position)) {
 		node->remove(this);
 		node = nullptr;
@@ -78,8 +96,11 @@ void Hive::update(const double& time) {
 	}
 }
 void Hive::dance() {
+	if (!dancing) {
+		danceTimer = 0;
+	}
+
 	dancing = true;
-	danceTimer.restart();
 }
 float Hive::compute(const std::pair<float*, float>& foodData,
 	const float& minYield, const float& maxYield,

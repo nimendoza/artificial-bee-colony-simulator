@@ -24,6 +24,6 @@ public:
 private:
 	sf::Text text;
 	sf::RectangleShape body;
-	sf::Clock regeneration;
+	float regeneration;
 	float food;
 };

@@ -6,7 +6,7 @@ const float Egg::INCUBATION_DURATION{ 24.0f * 3 / TIME_SCALING };
 Egg::Egg(const Point& position, Hive& hive, const BeeType& type) : Bee(position, hive, EggBee) {
 	body.setFillColor(Color::Green);
 
-	hatching.restart();
+	hatching = 0;
 
 	this->type = type;
 
@@ -20,28 +20,34 @@ void Egg::update(const double& time) {
 }
 void Egg::populate() {
 	updateWhen[Idle] = [&](const double& time) {
-		if (hatching.getElapsedTime().asSeconds() >= incubation) {
+		hatching += time;
+		if (hatching >= incubation) {
 			hatch();
 		}
 	};
 
 	updateWhen[Scouting] = [&](const double& time) {
+		hatching += time;
 		state = Idle;
 	};
 
 	updateWhen[Travelling] = [&](const double& time) {
+		hatching += time;
 		state = Idle;
 	};
 
 	updateWhen[Harvesting] = [&](const double& time) {
+		hatching += time;
 		state = Idle;
 	};
 
 	updateWhen[Delivering] = [&](const double& time) {
+		hatching += time;
 		state = Idle;
 	};
 
 	updateWhen[Depositing] = [&](const double& time) {
+		hatching += time;
 		state = Idle;
 	};
 }

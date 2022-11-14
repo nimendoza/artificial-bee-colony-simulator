@@ -23,7 +23,7 @@ void Employee::populate() {
 			if (distance(goal, position) <= TARGET_RADIUS) {
 				dance();
 				state = Harvesting;
-				harvestTimer.restart();
+				harvestTimer = 0;
 			} else {
 				Point newPosition = position;
 				float rotationR{ atan2(goal.y - position.y, goal.x - position.x) };
@@ -45,7 +45,7 @@ void Employee::populate() {
 
 		if (distance(goal, position) <= TARGET_RADIUS) {
 			state = Harvesting;
-			harvestTimer.restart();
+			harvestTimer = 0;
 		} else {
 			Point newPosition = position;
 			float rotationR{ atan2(goal.y - position.y, goal.x - position.x) };
@@ -62,7 +62,8 @@ void Employee::populate() {
 	};
 
 	updateWhen[Harvesting] = [&](const double& time) {
-		if (harvestTimer.getElapsedTime().asSeconds() >= harvestDuration) {
+		harvestTimer += time;
+		if (harvestTimer >= harvestDuration) {
 			if (food > CARRYING_CAPACITY) {
 				updateWhen[Delivering](time);
 			} else if (extractionYield + food > CARRYING_CAPACITY) {
@@ -80,7 +81,7 @@ void Employee::populate() {
 
 		if (distance(goal, position) <= TARGET_RADIUS) {
 			state = Depositing;
-			harvestTimer.restart();
+			harvestTimer = 0;
 		} else {
 			Point newPosition = position;
 			float rotationR{ atan2(goal.y - position.y, goal.x - position.x) };
@@ -97,7 +98,8 @@ void Employee::populate() {
 	};
 
 	updateWhen[Depositing] = [&](const double& time) {
-		if (harvestTimer.getElapsedTime().asSeconds() >= harvestDuration) {
+		harvestTimer += time;
+		if (harvestTimer >= harvestDuration) {
 			if (resting) {
 				state = Idle;
 			} else {

@@ -7,7 +7,7 @@ const float Foodsource::WIDHT{ 10.0F };
 const float Foodsource::HEIGHT{ 10.0F };
 const float Foodsource::REGENERATION_TIME{ 24.0F / TIME_SCALING };
 const float Foodsource::DETECTION_RADIUS{ 400.0F };
-const float Foodsource::MAX_FOOD_AMOUNT{ 10000.0F };
+const float Foodsource::MAX_FOOD_AMOUNT{ 50.0F };
 
 Foodsource::Foodsource(const Point& position) : Entity(position, Color::White, Color::Green), dimensions(WIDHT, HEIGHT), body(dimensions), food{ MAX_FOOD_AMOUNT }, text(), center(position.x + WIDHT / float(2), position.y + HEIGHT / float(2)) {
 	body.setPosition(position);
@@ -19,15 +19,15 @@ Foodsource::Foodsource(const Point& position) : Entity(position, Color::White, C
 	text.setOutlineColor(Color::White);
 	text.setFillColor(Color::White);
 	text.setPosition(position + Point(1, 1));
-	regeneration.restart();
+	regeneration = REGENERATION_TIME;
 
 	text.setFont(Fonts::get()->font);
 }
 
 void Foodsource::update(const double& time) {
-	if (regeneration.getElapsedTime().asSeconds() >= REGENERATION_TIME) {
+	if (regeneration >= REGENERATION_TIME) {
 		food = MAX_FOOD_AMOUNT;
-		regeneration.restart();
+		regeneration = 0;
 	}
 
 	if (node != nullptr && !node->contains(position)) {

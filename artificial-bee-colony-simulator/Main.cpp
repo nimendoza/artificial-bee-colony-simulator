@@ -10,7 +10,7 @@ const float CAMERA_SPEED{ 300.0F };
 int main() {
 	// TOGGLE FROM DEBUG TO RELEASE
 
-	bool rendering = false;
+	bool rendering = true;
 	bool running = true;
 
 	sf::ContextSettings settings;
@@ -58,8 +58,8 @@ int main() {
 		if (running) {
 			double time = clock.restart().asSeconds();
 			Bees::get()->update(time);
-			Hives::get()->update(time);
 			Foodsources::get()->update(time);
+			Hives::get()->update(time);
 
 			int count{ 1 };
 			for (auto i{ Hives::get()->list.begin() }; i != Hives::get()->list.end(); i++, count++) {
@@ -73,6 +73,8 @@ int main() {
 					<< (*i)->count[LarvaBee] << '\t'
 					<< (*i)->count[EggBee] << '\n';
 			}
+
+			clock.restart();
 		}
 
 		if (rendering) {

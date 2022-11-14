@@ -19,11 +19,15 @@ public:
 	static const float WIDTH;
 	static const float HEIGHT;
 	static const float DANCE_DURATION;
+	static const float NO_ATTACK_CHANCE;
+	static const float FOOD_PENALTY;
+	static const int GUARD_PENALTY;
 	
 	Point dimensions;
 	Point center;
 	std::map<BeeType, int> count;
 	std::vector<class Bee*> idles;
+	std::vector<class Bee*> guards;
 	std::map<class Foodsource* const, std::pair<float*, float>> data;
 	float food;
 private:
@@ -31,7 +35,7 @@ private:
 
 	sf::RectangleShape body;
 	sf::Text text;
-	sf::Clock danceTimer;
+	float danceTimer;
 	bool dancing;
 };
 
