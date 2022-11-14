@@ -51,17 +51,16 @@ void Hive::update(const double& time) {
 		std::sort(begin(weights), end(weights), [](const std::pair<Foodsource* const, float>& lhs, const std::pair<Foodsource* const, float>& rhs) {
 			return lhs.second > rhs.second;
 			});
+		std::reverse(begin(weights), end(weights));
+		std::vector<int> w(weights.size());
+		for (int i{}; i < w.size(); i++) {
+			w[i] = i + 1;
+		}
+		std::discrete_distribution<int> distribution(begin(w), end(w));
 
 		int count{};
 		for (auto i{ begin(idles) }; i != end(idles); i++) {
-			std::vector<int> w(weights.size());
-			for (int i{}; i < w.size(); i++) {
-				for (int j{}; j < w.size() - 1; j++) {
-					w[j] = i + 1;
-				}
-			}
 
-			std::discrete_distribution<int> distribution(begin(w), end(w));
 			int roll{ distribution(engine) };
 			(*i)->target(weights[roll].first);
 			(*i)->state = Travelling;

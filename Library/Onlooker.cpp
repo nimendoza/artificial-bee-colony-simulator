@@ -12,7 +12,13 @@ Onlooker::Onlooker(const Point& point, Hive& hive) : Bee(position, hive, Onlooke
 
 void Onlooker::populate() {
 	updateWhen[Idle] = [&](const double& time) {
-		hive.add(this);
+		if (foodsource != nullptr && foodsource->viable()) {
+			target(foodsource);
+			state = Travelling;
+		}
+		else {
+			hive.add(this);
+		}
 	};
 
 	updateWhen[Scouting] = [&](const double& time) {

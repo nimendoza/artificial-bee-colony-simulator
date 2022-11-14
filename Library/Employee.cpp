@@ -13,7 +13,12 @@ Employee::Employee(const Point& position, Hive& hive) : Bee(position, hive, Empl
 void Employee::populate() {
 	updateWhen[Idle] = [&](const double& time) {
 		if (!resting) {
-			state = Scouting;
+			if (foodsource != nullptr && foodsource->viable()) {
+				state = Travelling;
+			}
+			else {
+				state = Scouting;
+			}
 		}
 	};
 
@@ -38,6 +43,8 @@ void Employee::populate() {
 					Bee::update(newPosition, rotationR);
 				}
 			}
+		} else {
+			state = Idle;
 		}
 	};
 
@@ -111,7 +118,6 @@ void Employee::populate() {
 			if (resting) {
 				state = Idle;
 			} else {
-				dance();
 				deposit(food);
 				if (!foodsource->viable()) {
 					hive.remove(foodsource);

@@ -30,5 +30,8 @@
     <Text Include="Map 1.txt">
       <Filter>Input</Filter>
     </Text>
+    <Text Include="Map 2.txt">
+      <Filter>Input</Filter>
+    </Text>
   </ItemGroup>
 </Project>
