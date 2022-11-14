@@ -6,17 +6,16 @@ const float Queen::MAX_EGGS_LAID{ 3000.0F };
 
 Queen::Queen(const Point& position, Hive& hive) : Bee(position, hive, QueenBee) {
 	body.setFillColor(Color::Magenta);
-	
-	laysEggs = 0;
+
+	laysEggs.restart();
 
 	Queen::populate();
 }
 
 void Queen::populate() {
 	updateWhen[Idle] = [&](const double& time) {
-		laysEggs += time;
-		if (laysEggs >= EGG_LAYING_INTERVAL) {
-			laysEggs = 0;
+		if (laysEggs.getElapsedTime().asSeconds() >= EGG_LAYING_INTERVAL) {
+			laysEggs.restart();
 
 			for (int i{ hive.count[OnlookerBee] }; i < 90; i++) {
 				Bees::get()->spawn(position, hive, OnlookerBee);
@@ -33,6 +32,7 @@ void Queen::populate() {
 
 			if (forDeletion) {
 				Bees::get()->spawn(position, hive, QueenBee);
+				Bees::get()->cleanup();
 			}
 
 			std::normal_distribution<float> distribution(0, int(MAX_EGGS_LAID));

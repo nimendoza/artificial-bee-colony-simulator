@@ -35,7 +35,7 @@ private:
 
 	sf::RectangleShape body;
 	sf::Text text;
-	float danceTimer;
+	sf::Clock danceTimer;
 	bool dancing;
 };
 

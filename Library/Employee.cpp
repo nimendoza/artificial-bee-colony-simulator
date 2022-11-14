@@ -29,7 +29,7 @@ void Employee::populate() {
 			if (distance(goal, position) <= TARGET_RADIUS) {
 				dance();
 				state = Harvesting;
-				harvestTimer = 0;
+				harvestTimer.restart();
 			} else {
 				Point newPosition = position;
 				float rotationR{ atan2(goal.y - position.y, goal.x - position.x) };
@@ -53,7 +53,7 @@ void Employee::populate() {
 
 		if (distance(goal, position) <= TARGET_RADIUS) {
 			state = Harvesting;
-			harvestTimer = 0;
+			harvestTimer.restart();
 		} else {
 			Point newPosition = position;
 			float rotationR{ atan2(goal.y - position.y, goal.x - position.x) };
@@ -70,15 +70,13 @@ void Employee::populate() {
 	};
 
 	updateWhen[Harvesting] = [&](const double& time) {
-		harvestTimer += time;
-		
 		std::discrete_distribution<int> poison{ 70, pesticide_chance * pow(0.5, time / 40) };
 		if (poison(engine)) {
 			std::cout << "A bee died to pesticides\n";
 			forDeletion = true;
 		}
 
-		if (harvestTimer >= harvestDuration) {
+		if (harvestTimer.getElapsedTime().asSeconds() >= harvestDuration) {
 			if (food > CARRYING_CAPACITY) {
 				updateWhen[Delivering](time);
 			} else if (extractionYield + food > CARRYING_CAPACITY) {
@@ -96,7 +94,7 @@ void Employee::populate() {
 
 		if (distance(goal, position) <= TARGET_RADIUS) {
 			state = Depositing;
-			harvestTimer = 0;
+			harvestTimer.restart();
 		} else {
 			Point newPosition = position;
 			float rotationR{ atan2(goal.y - position.y, goal.x - position.x) };
@@ -113,8 +111,7 @@ void Employee::populate() {
 	};
 
 	updateWhen[Depositing] = [&](const double& time) {
-		harvestTimer += time;
-		if (harvestTimer >= harvestDuration) {
+		if (harvestTimer.getElapsedTime().asSeconds() >= harvestDuration) {
 			if (resting) {
 				state = Idle;
 			} else {

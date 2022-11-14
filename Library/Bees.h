@@ -6,8 +6,6 @@ private:
 	Bees();
 
 	static Bees* instance;
-
-	void cleanup();
 public:
 	~Bees();
 
@@ -15,6 +13,7 @@ public:
 	void render(Window& window) override;
 	void spawn(const Point& position, Hive& hive, const BeeType& primary);
 	void spawn(const Point& position, Hive& hive, const BeeType& primary, const BeeType& secondary);
+	void cleanup();
 
 	static Bees* get();
 

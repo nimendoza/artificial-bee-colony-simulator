@@ -30,7 +30,7 @@ void Onlooker::populate() {
 
 		if (distance(goal, position) <= TARGET_RADIUS) {
 			state = Harvesting;
-			harvestTimer = 0;
+			harvestTimer.restart();
 		} else {
 			Point newPosition = position;
 			float rotationR{ atan2(goal.y - position.y, goal.x - position.x) };
@@ -47,8 +47,7 @@ void Onlooker::populate() {
 	};
 
 	updateWhen[Harvesting] = [&](const double& time) {
-		harvestTimer += time;
-		if (harvestTimer >= harvestDuration) {
+		if (harvestTimer.getElapsedTime().asSeconds() >= harvestDuration) {
 
 			std::discrete_distribution<int> poison{ 70, pesticide_chance * pow(0.5, time/40) };
 			if (poison(engine)) {
@@ -73,7 +72,7 @@ void Onlooker::populate() {
 
 		if (distance(goal, position) <= TARGET_RADIUS) {
 			state = Depositing;
-			harvestTimer = 0;
+			harvestTimer.restart();
 		} else {
 			Point newPosition = position;
 			float rotationR{ atan2(goal.y - position.y, goal.x - position.x) };
@@ -90,8 +89,7 @@ void Onlooker::populate() {
 	};
 
 	updateWhen[Depositing] = [&](const double& time) {
-		harvestTimer += time;
-		if (harvestTimer >= harvestDuration) {
+		if (harvestTimer.getElapsedTime().asSeconds() >= harvestDuration) {
 			if (!resting)  {
 				deposit(food);
 				if (!foodsource->viable()) {

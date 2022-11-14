@@ -42,7 +42,7 @@ int main() {
 		<< "[Eggs]" << '\n';
 
 	std::stringstream inputPath;
-	inputPath << directory << "/Utilities/Map 2.txt";
+	inputPath << directory << "/Utilities/Map 0.txt";
 	World::get()->generate(inputPath.str());
 
 	view.setCenter(Hives::get()->list[0]->center);

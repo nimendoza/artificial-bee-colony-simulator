@@ -21,8 +21,6 @@ Bees::~Bees() {
 }
 
 void Bees::update(const double& deltaTime) {
-	cleanup();
-
 	for (auto i{ begin(list) }; i != end(list); i++) {
 		for (auto j{ begin(i->second) }; i->second.size() && j != end(i->second); j++) {
 			(*j)->update(deltaTime);
@@ -87,6 +85,9 @@ void Bees::cleanup() {
 						(*i)->hive.count[ForagerBee]--;
 					}
 					if (beeType == OnlookerBee) {
+						(*i)->hive.remove((*i));
+					}
+					if (beeType == GuardBee) {
 						(*i)->hive.remove((*i));
 					}
 					delete (*i);

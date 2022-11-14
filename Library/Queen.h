@@ -10,5 +10,5 @@ public:
 protected:
 	void populate() override;
 
-	float laysEggs;
+	sf::Clock laysEggs;
 };

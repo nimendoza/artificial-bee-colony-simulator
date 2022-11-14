@@ -54,10 +54,10 @@ protected:
 
 	sf::CircleShape body;
 	sf::RectangleShape face;
-	float harvestTimer;
-	float rest;
-	float work;
-	float life;
+	sf::Clock harvestTimer;
+	sf::Clock rest;
+	sf::Clock work;
+	sf::Clock life;
 	Foodsource* foodsource;
 	Point goal;
 	float speed;

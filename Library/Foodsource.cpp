@@ -19,15 +19,15 @@ Foodsource::Foodsource(const Point& position) : Entity(position, Color::White, C
 	text.setOutlineColor(Color::White);
 	text.setFillColor(Color::White);
 	text.setPosition(position + Point(1, 1));
-	regeneration = REGENERATION_TIME;
+	regeneration.restart();
 
 	text.setFont(Fonts::get()->font);
 }
 
 void Foodsource::update(const double& time) {
-	if (regeneration >= REGENERATION_TIME) {
+	if (regeneration.getElapsedTime().asSeconds() >= REGENERATION_TIME) {
 		food = MAX_FOOD_AMOUNT;
-		regeneration = 0;
+		regeneration.restart();
 	}
 
 	if (node != nullptr && !node->contains(position)) {

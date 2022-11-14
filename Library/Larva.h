@@ -12,7 +12,7 @@ private:
 	void populate() override;
 	void develop();
 
-	float emerge;
+	sf::Clock emerge;
 	float emergesIn;
 	BeeType type;
 };

@@ -12,7 +12,7 @@ private:
 	void populate() override;
 	void hatch();
 
-	float hatching;
+	sf::Clock hatching;
 	BeeType type;
 	float incubation;
 };
