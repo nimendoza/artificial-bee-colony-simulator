@@ -1,8 +1,8 @@
 ﻿  pch.cpp
   Bee.cpp
-C:\Users\Rafaela\source\repos\artificial-bee-colony-simulator\Library\Bee.cpp(81,36): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Rafaela\source\repos\artificial-bee-colony-simulator\Library\Bee.cpp(84,36): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Rafaela\source\repos\artificial-bee-colony-simulator\Library\Bee.cpp(93,35): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Rafaela\source\repos\artificial-bee-colony-simulator\Library\Bee.cpp(84,36): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Rafaela\source\repos\artificial-bee-colony-simulator\Library\Bee.cpp(87,36): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Rafaela\source\repos\artificial-bee-colony-simulator\Library\Bee.cpp(96,35): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
   Bees.cpp
   Drone.cpp
   Egg.cpp

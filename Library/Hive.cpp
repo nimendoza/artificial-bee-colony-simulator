@@ -7,9 +7,9 @@
 const float Hive::WIDTH{ 100.0F };
 const float Hive::HEIGHT{ 100.0F };
 const float Hive::DANCE_DURATION{ 0.05F / TIME_SCALING };
-const float Hive::NO_ATTACK_CHANCE{ 12000 / TIME_SCALING };
-const float Hive::FOOD_PENALTY{ 0.90F };
-const int Hive::GUARD_PENALTY{ 10 };
+//const float Hive::NO_ATTACK_CHANCE{ 12000 / TIME_SCALING };
+const float Hive::FOOD_PENALTY{ 0.80F };
+const int Hive::GUARD_PENALTY{ 100 };
 
 Hive::Hive(const Point& position) : Entity(position, Color::White, Color::Yellow), guards{}, dimensions(WIDTH, HEIGHT), body(dimensions), food{}, count{}, idles{}, data{}, text(), center(position.x + WIDTH / float(2), position.y + HEIGHT / float(2)), dancing(false) {
 	body.setPosition(position);
@@ -69,7 +69,8 @@ void Hive::update(const double& time) {
 		dancing = false;
 	}
 
-	std::discrete_distribution<int> attack{ NO_ATTACK_CHANCE, 0 };
+	//PREDATORS
+	std::discrete_distribution<int> attack{ 100, 0 };
 	if (attack(engine)) {
 		std::cout << "An attack happened!\n";
 

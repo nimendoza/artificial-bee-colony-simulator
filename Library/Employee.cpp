@@ -70,7 +70,7 @@ void Employee::populate() {
 	};
 
 	updateWhen[Harvesting] = [&](const double& time) {
-		std::discrete_distribution<int> poison{ 70, pesticide_chance * pow(0.5, time / 40) };
+		std::discrete_distribution<int> poison{ 100 - pesticide_chance, pesticide_chance * pow(0.5, time / 40) };
 		if (poison(engine)) {
 			std::cout << "A bee died to pesticides\n";
 			forDeletion = true;
@@ -114,11 +114,15 @@ void Employee::populate() {
 		if (harvestTimer.getElapsedTime().asSeconds() >= harvestDuration) {
 			if (resting) {
 				state = Idle;
-			} else {
+			}
+			else {
 				deposit(food);
 				if (!foodsource->viable()) {
 					hive.remove(foodsource);
 					foodsource = nullptr;
+				}
+				else {
+					dance();
 				}
 
 				state = (foodsource == nullptr) ? Scouting : Travelling;

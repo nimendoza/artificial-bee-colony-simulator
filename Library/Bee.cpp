@@ -6,6 +6,7 @@
 const float INF(1e10);
 const float TOTAL_HOURS{ 24.0F / TIME_SCALING };
 
+//PESTICIDES CHANCE
 const double Bee::pesticide_chance = 0;
 const float Bee::CARRYING_CAPACITY{ 10.0F };
 const float Bee::SPEED{ 100.0F * TIME_SCALING };
@@ -31,6 +32,7 @@ const Color Bee::STANDARD_BODY_COLOR{ Color::Yellow };
 const Color Bee::NORMAL_COLOR{ Color::White };
 const Color Bee::ALERT_COLOR{ Color::Red };
 
+//PARASITES AND PATHOGENS
 double infection_chance = 0;
 
 Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(position, NORMAL_COLOR, ALERT_COLOR), hive{ hive }, foodsource(nullptr), body(BODY_RADIUS), face(Point(BODY_RADIUS, 2)) {
@@ -66,17 +68,18 @@ Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(positi
 	fatiguePenalty = std::normal_distribution<float>(FATIGUE_PENALTY, 1.0F / TIME_SCALING)(engine);
 	extractionYield = std::normal_distribution<float>(EXTRACTION_YIELD, 3.0F * TIME_SCALING)(engine);
 	food = 0;
-	lifespan = std::normal_distribution<float>((LIFESPAN.at(type) / std::discrete_distribution<int>{0, 100, infection_chance}(engine)), 24.0F / TIME_SCALING)(engine);
+	lifespan = 1 * std::normal_distribution<float>((LIFESPAN.at(type) / std::discrete_distribution<int>{0, 100, infection_chance}(engine)), 24.0F / TIME_SCALING)(engine);
 	resting = false;
-}
+}//SHORTENED LIFESPAN
 
 void Bee::update(const double& time) {
+	//WEATHER
 	std::discrete_distribution<int> d{10000, 5};
 	if (d(engine)) {
 		forDeletion = true;
 	}
 
-	if (resting) {
+	if (resting && false) {
 		if (at(&hive)) {
 			energy += energyConsumptionRate * time;
 			state = Idle;
