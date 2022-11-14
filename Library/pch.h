@@ -27,6 +27,6 @@ using Color = sf::Color;
 using Point = sf::Vector2f;
 using Window = sf::RenderWindow;
 
-const float TIME_SCALING = 24;
+const float TIME_SCALING = 1;
 
 #endif //PCH_H

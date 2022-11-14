@@ -1,38 +1,38 @@
 ﻿  pch.cpp
   Bee.cpp
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Bee.cpp(79,36): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Bee.cpp(82,36): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Bee.cpp(91,35): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Bee.cpp(81,36): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Bee.cpp(84,36): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Bee.cpp(93,35): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
   Bees.cpp
   Drone.cpp
   Egg.cpp
   Employee.cpp
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(30,46): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Employee.cpp(36,46): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(31,46): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Employee.cpp(37,46): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(52,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Employee.cpp(60,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(53,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Employee.cpp(61,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(87,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Employee.cpp(101,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(88,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Employee.cpp(102,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
@@ -40,25 +40,25 @@ D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(88,45):
   Entity.cpp
   Fonts.cpp
   Foodsource.cpp
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Foodsource.cpp(44,33): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Foodsource.cpp(44,33): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
   Foodsources.cpp
   Grid.cpp
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Grid.cpp(5,86): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Grid.cpp(5,86): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Grid.cpp(5,53): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Grid.cpp(5,53): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Grid.cpp(15,35): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Grid.cpp(15,35): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Grid.cpp(15,21): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Grid.cpp(15,21): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
@@ -67,40 +67,46 @@ D:\Documents\Github\artificial-bee-colony-simulator\Library\Grid.cpp(15,21): war
   Hive.cpp
   Hives.cpp
   Larva.cpp
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Larva.cpp(7,68): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Larva.cpp(7,37): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Larva.cpp(8,68): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Larva.cpp(8,37): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Larva.cpp(9,69): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Larva.cpp(9,38): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
   Node.cpp
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Node.cpp(33,29): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Node.cpp(33,29): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Node.cpp(33,23): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Node.cpp(33,23): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
           with
           [
               T=float
           ]
   Onlooker.cpp
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Onlooker.cpp(30,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Onlooker.cpp(37,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Onlooker.cpp(31,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Onlooker.cpp(38,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Onlooker.cpp(65,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Onlooker.cpp(79,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Onlooker.cpp(66,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Onlooker.cpp(80,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
   Queen.cpp
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Queen.cpp(38,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Queen.cpp(39,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   World.cpp
   Generating Code...
-  Library.vcxproj -> D:\Documents\Github\artificial-bee-colony-simulator\x64\Debug\Library.lib
+  Library.vcxproj -> C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\x64\Debug\Library.lib

@@ -4,107 +4,108 @@ D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.3193
 D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\atomic(93,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
 D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\atomic(300,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
 D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\atomic(316,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\System\FileInputStream.hpp(130,1): warning C4625: 'sf::FileInputStream': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\System\FileInputStream.hpp(130,1): warning C4626: 'sf::FileInputStream': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\System\Lock.hpp(71,1): warning C4625: 'sf::Lock': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\System\Lock.hpp(71,1): warning C4626: 'sf::Lock': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\System\Mutex.hpp(89,1): warning C4625: 'sf::Mutex': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\System\Mutex.hpp(89,1): warning C4626: 'sf::Mutex': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\System\Thread.hpp(191,1): warning C4625: 'sf::Thread': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\System\Thread.hpp(191,1): warning C4626: 'sf::Thread': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\System\ThreadLocal.hpp(87,1): warning C4625: 'sf::ThreadLocal': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\System\ThreadLocal.hpp(87,1): warning C4626: 'sf::ThreadLocal': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Window\GlResource.hpp(93,5): warning C4625: 'sf::GlResource::TransientContextLock': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Window\GlResource.hpp(93,5): warning C4626: 'sf::GlResource::TransientContextLock': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Window\ContextSettings.hpp(83,1): warning C4820: 'sf::ContextSettings': '3' bytes padding added after data member 'sf::ContextSettings::sRgbCapable'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Window\Context.hpp(153,31): warning C4820: 'sf::Context': '7' bytes padding added after base class 'sf::NonCopyable'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Window\Context.hpp(154,1): warning C4625: 'sf::Context': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Window\Context.hpp(154,1): warning C4626: 'sf::Context': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Window\Cursor.hpp(183,1): warning C4625: 'sf::Cursor': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Window\Cursor.hpp(183,1): warning C4626: 'sf::Cursor': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Window\Window.hpp(545,29): warning C4820: 'sf::Window': '7' bytes padding added after base class 'sf::NonCopyable'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Window\Window.hpp(550,1): warning C4625: 'sf::Window': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Window\Window.hpp(550,1): warning C4626: 'sf::Window': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(325,23): warning C4820: 'sf::Transformable': '3' bytes padding added after data member 'sf::Transformable::m_transformNeedUpdate'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(327,1): warning C4820: 'sf::Transformable': '7' bytes padding added after data member 'sf::Transformable::m_inverseTransformNeedUpdate'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\VertexArray.hpp(192,1): warning C4820: 'sf::VertexArray': '4' bytes padding added after data member 'sf::VertexArray::m_primitiveType'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\Shape.hpp(313,20): warning C4820: 'sf::Shape': '4' bytes padding added after data member 'sf::Shape::m_outlineThickness'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\CircleShape.hpp(115,17): warning C4820: 'sf::CircleShape': '4' bytes padding added after data member 'sf::CircleShape::m_radius'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\Texture.hpp(628,18): warning C4820: 'sf::Texture': '6' bytes padding added after data member 'sf::Texture::m_hasMipmap'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\Font.hpp(297,26): warning C4820: 'sf::Font::Page': '4' bytes padding added after data member 'sf::Font::Page::nextRow'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\View.hpp(280,1): warning C4820: 'sf::View': '2' bytes padding added after data member 'sf::View::m_invTransformUpdated'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(464,19): warning C4820: 'sf::RenderTarget::StatesCache': '1' bytes padding added after data member 'sf::RenderTarget::StatesCache::viewChanged'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(465,19): warning C4820: 'sf::RenderTarget::StatesCache': '4' bytes padding added after data member 'sf::RenderTarget::StatesCache::lastBlendMode'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(468,47): warning C4820: 'sf::RenderTarget::StatesCache': '2' bytes padding added after data member 'sf::RenderTarget::StatesCache::useVertexCache'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(469,5): warning C4820: 'sf::RenderTarget::StatesCache': '4' bytes padding added after data member 'sf::RenderTarget::StatesCache::vertexCache'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(478,1): warning C4625: 'sf::RenderTarget': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(478,1): warning C4626: 'sf::RenderTarget': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(243,1): warning C4625: 'sf::RenderTexture': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(243,1): warning C4626: 'sf::RenderTexture': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderWindow.hpp(180,1): warning C4625: 'sf::RenderWindow': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderWindow.hpp(180,1): warning C4626: 'sf::RenderWindow': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(748,18): warning C4820: 'sf::Shader': '3' bytes padding added after base class 'sf::NonCopyable'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(750,18): warning C4820: 'sf::Shader': '4' bytes padding added after data member 'sf::Shader::m_currentTexture'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(752,1): warning C4625: 'sf::Shader': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(752,1): warning C4626: 'sf::Shader': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\Text.hpp(447,25): warning C4820: 'sf::Text': '4' bytes padding added after data member 'sf::Text::m_outlineThickness'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\Text.hpp(451,25): warning C4820: 'sf::Text': '7' bytes padding added after data member 'sf::Text::m_geometryNeedUpdate'
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\VertexBuffer.hpp(338,19): warning C4820: 'sf::VertexBuffer': '4' bytes padding added after data member 'sf::VertexBuffer::m_buffer'
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Base.h(8,3): warning C5204: 'Base': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Base.h(12,36): warning C4100: 'time': unreferenced formal parameter
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Base.h(13,30): warning C4100: 'window': unreferenced formal parameter
-D:\Documents\Github\artificial-bee-colony-simulator\Library\World.h(16,1): warning C4625: 'World': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\World.h(16,1): warning C4626: 'World': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\World.h(9,3): warning C4265: 'World': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-D:\Documents\Github\artificial-bee-colony-simulator\Library\World.h(13,28): warning C4100: 'time': unreferenced formal parameter
-D:\Documents\Github\artificial-bee-colony-simulator\Library\World.h(14,22): warning C4100: 'window': unreferenced formal parameter
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Entity.h(16,8): warning C4820: 'Entity': '3' bytes padding added after data member 'Entity::forDeletion'
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Entity.h(20,18): warning C4820: 'Entity': '4' bytes padding added after data member 'Entity::fill'
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Entity.h(22,1): warning C4625: 'Entity': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Entity.h(22,1): warning C4626: 'Entity': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Entity.h(7,3): warning C5204: 'Entity': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Entity.h(9,36): warning C4100: 'time': unreferenced formal parameter
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Entity.h(10,30): warning C4100: 'window': unreferenced formal parameter
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Hive.h(32,21): warning C4820: 'Hive': '4' bytes padding added after data member 'Hive::food'
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Hive.h(36,1): warning C4820: 'Hive': '7' bytes padding added after data member 'Hive::dancing'
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Hive.h(36,1): warning C4625: 'Hive': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Hive.h(36,1): warning C4626: 'Hive': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Hive.h(7,3): warning C4265: 'Hive': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Hives.h(19,1): warning C4625: 'Hives': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Hives.h(19,1): warning C4626: 'Hives': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Hives.h(10,3): warning C4265: 'Hives': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Foodsource.h(29,1): warning C4820: 'Foodsource': '4' bytes padding added after data member 'Foodsource::food'
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Foodsource.h(29,1): warning C4625: 'Foodsource': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Foodsource.h(29,1): warning C4626: 'Foodsource': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Foodsource.h(7,3): warning C4265: 'Foodsource': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Bee.h(50,37): warning C4820: 'Bee': '3' bytes padding added after data member 'Bee::resting'
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Bee.h(54,18): warning C4820: 'Bee': '4' bytes padding added after data member 'Bee::PI'
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Bee.h(73,1): warning C4820: 'Bee': '4' bytes padding added after data member 'Bee::lifespan'
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Bee.h(73,1): warning C4625: 'Bee': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Bee.h(73,1): warning C4626: 'Bee': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Bee.h(9,3): warning C4265: 'Bee': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Bees.h(22,1): warning C4625: 'Bees': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Bees.h(22,1): warning C4626: 'Bees': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Bees.h(12,3): warning C4265: 'Bees': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Foodsources.h(21,1): warning C4625: 'Foodsources': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Foodsources.h(21,1): warning C4626: 'Foodsources': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Foodsources.h(10,3): warning C4265: 'Foodsources': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Node.h(26,21): warning C4820: 'Node': '4' bytes padding added after data member 'Node::size'
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Node.h(28,1): warning C4625: 'Node': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Node.h(28,1): warning C4626: 'Node': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Node.h(9,3): warning C4265: 'Node': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Node.h(11,28): warning C4100: 'time': unreferenced formal parameter
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Grid.h(26,1): warning C4820: 'Grid': '7' bytes padding added after data member 'Grid::visible'
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Grid.h(26,1): warning C4625: 'Grid': copy constructor was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Grid.h(26,1): warning C4626: 'Grid': assignment operator was implicitly defined as deleted
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Grid.h(16,3): warning C4265: 'Grid': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Grid.h(18,28): warning C4100: 'time': unreferenced formal parameter
-D:\Documents\Github\artificial-bee-colony-simulator\artificial-bee-colony-simulator\Main.cpp(7,29): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(53,5): warning C4514: 'sf::NonCopyable::NonCopyable': unreferenced inline function has been removed
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(63,6): warning C4514: 'sf::NonCopyable::~NonCopyable': unreferenced inline function has been removed
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\Glyph.hpp(49,5): warning C4514: 'sf::Glyph::Glyph': unreferenced inline function has been removed
-D:\Documents\Github\artificial-bee-colony-simulator\External\x64\SFML-2.5.1\include\SFML\Graphics\Font.hpp(274,9): warning C4514: 'sf::Font::Row::Row': unreferenced inline function has been removed
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Base.h(5,2): warning C4514: 'Base::Base': unreferenced inline function has been removed
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\System\FileInputStream.hpp(130,1): warning C4625: 'sf::FileInputStream': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\System\FileInputStream.hpp(130,1): warning C4626: 'sf::FileInputStream': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\System\Lock.hpp(71,1): warning C4625: 'sf::Lock': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\System\Lock.hpp(71,1): warning C4626: 'sf::Lock': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\System\Mutex.hpp(89,1): warning C4625: 'sf::Mutex': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\System\Mutex.hpp(89,1): warning C4626: 'sf::Mutex': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\System\Thread.hpp(191,1): warning C4625: 'sf::Thread': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\System\Thread.hpp(191,1): warning C4626: 'sf::Thread': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\System\ThreadLocal.hpp(87,1): warning C4625: 'sf::ThreadLocal': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\System\ThreadLocal.hpp(87,1): warning C4626: 'sf::ThreadLocal': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Window\GlResource.hpp(93,5): warning C4625: 'sf::GlResource::TransientContextLock': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Window\GlResource.hpp(93,5): warning C4626: 'sf::GlResource::TransientContextLock': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Window\ContextSettings.hpp(83,1): warning C4820: 'sf::ContextSettings': '3' bytes padding added after data member 'sf::ContextSettings::sRgbCapable'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Window\Context.hpp(153,31): warning C4820: 'sf::Context': '7' bytes padding added after base class 'sf::NonCopyable'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Window\Context.hpp(154,1): warning C4625: 'sf::Context': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Window\Context.hpp(154,1): warning C4626: 'sf::Context': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Window\Cursor.hpp(183,1): warning C4625: 'sf::Cursor': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Window\Cursor.hpp(183,1): warning C4626: 'sf::Cursor': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Window\Window.hpp(545,29): warning C4820: 'sf::Window': '7' bytes padding added after base class 'sf::NonCopyable'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Window\Window.hpp(550,1): warning C4625: 'sf::Window': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Window\Window.hpp(550,1): warning C4626: 'sf::Window': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(325,23): warning C4820: 'sf::Transformable': '3' bytes padding added after data member 'sf::Transformable::m_transformNeedUpdate'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\Transformable.hpp(327,1): warning C4820: 'sf::Transformable': '7' bytes padding added after data member 'sf::Transformable::m_inverseTransformNeedUpdate'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\VertexArray.hpp(192,1): warning C4820: 'sf::VertexArray': '4' bytes padding added after data member 'sf::VertexArray::m_primitiveType'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\Shape.hpp(313,20): warning C4820: 'sf::Shape': '4' bytes padding added after data member 'sf::Shape::m_outlineThickness'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\CircleShape.hpp(115,17): warning C4820: 'sf::CircleShape': '4' bytes padding added after data member 'sf::CircleShape::m_radius'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\Texture.hpp(628,18): warning C4820: 'sf::Texture': '6' bytes padding added after data member 'sf::Texture::m_hasMipmap'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\Font.hpp(297,26): warning C4820: 'sf::Font::Page': '4' bytes padding added after data member 'sf::Font::Page::nextRow'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\View.hpp(280,1): warning C4820: 'sf::View': '2' bytes padding added after data member 'sf::View::m_invTransformUpdated'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(464,19): warning C4820: 'sf::RenderTarget::StatesCache': '1' bytes padding added after data member 'sf::RenderTarget::StatesCache::viewChanged'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(465,19): warning C4820: 'sf::RenderTarget::StatesCache': '4' bytes padding added after data member 'sf::RenderTarget::StatesCache::lastBlendMode'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(468,47): warning C4820: 'sf::RenderTarget::StatesCache': '2' bytes padding added after data member 'sf::RenderTarget::StatesCache::useVertexCache'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(469,5): warning C4820: 'sf::RenderTarget::StatesCache': '4' bytes padding added after data member 'sf::RenderTarget::StatesCache::vertexCache'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(478,1): warning C4625: 'sf::RenderTarget': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTarget.hpp(478,1): warning C4626: 'sf::RenderTarget': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(243,1): warning C4625: 'sf::RenderTexture': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderTexture.hpp(243,1): warning C4626: 'sf::RenderTexture': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderWindow.hpp(180,1): warning C4625: 'sf::RenderWindow': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\RenderWindow.hpp(180,1): warning C4626: 'sf::RenderWindow': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(748,18): warning C4820: 'sf::Shader': '3' bytes padding added after base class 'sf::NonCopyable'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(750,18): warning C4820: 'sf::Shader': '4' bytes padding added after data member 'sf::Shader::m_currentTexture'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(752,1): warning C4625: 'sf::Shader': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\Shader.hpp(752,1): warning C4626: 'sf::Shader': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\Text.hpp(447,25): warning C4820: 'sf::Text': '4' bytes padding added after data member 'sf::Text::m_outlineThickness'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\Text.hpp(451,25): warning C4820: 'sf::Text': '7' bytes padding added after data member 'sf::Text::m_geometryNeedUpdate'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\VertexBuffer.hpp(338,19): warning C4820: 'sf::VertexBuffer': '4' bytes padding added after data member 'sf::VertexBuffer::m_buffer'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Base.h(8,3): warning C5204: 'Base': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Base.h(12,36): warning C4100: 'time': unreferenced formal parameter
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Base.h(13,30): warning C4100: 'window': unreferenced formal parameter
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\World.h(16,1): warning C4625: 'World': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\World.h(16,1): warning C4626: 'World': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\World.h(9,3): warning C4265: 'World': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\World.h(13,28): warning C4100: 'time': unreferenced formal parameter
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\World.h(14,22): warning C4100: 'window': unreferenced formal parameter
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Entity.h(16,8): warning C4820: 'Entity': '3' bytes padding added after data member 'Entity::forDeletion'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Entity.h(20,18): warning C4820: 'Entity': '4' bytes padding added after data member 'Entity::fill'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Entity.h(22,1): warning C4625: 'Entity': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Entity.h(22,1): warning C4626: 'Entity': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Entity.h(7,3): warning C5204: 'Entity': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Entity.h(9,36): warning C4100: 'time': unreferenced formal parameter
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Entity.h(10,30): warning C4100: 'window': unreferenced formal parameter
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Hive.h(36,21): warning C4820: 'Hive': '4' bytes padding added after data member 'Hive::food'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Hive.h(40,1): warning C4820: 'Hive': '7' bytes padding added after data member 'Hive::dancing'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Hive.h(40,1): warning C4625: 'Hive': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Hive.h(40,1): warning C4626: 'Hive': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Hive.h(7,3): warning C4265: 'Hive': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Hives.h(19,1): warning C4625: 'Hives': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Hives.h(19,1): warning C4626: 'Hives': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Hives.h(10,3): warning C4265: 'Hives': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Foodsource.h(29,1): warning C4820: 'Foodsource': '4' bytes padding added after data member 'Foodsource::food'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Foodsource.h(29,1): warning C4625: 'Foodsource': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Foodsource.h(29,1): warning C4626: 'Foodsource': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Foodsource.h(7,3): warning C4265: 'Foodsource': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Bee.h(51,37): warning C4820: 'Bee': '3' bytes padding added after data member 'Bee::resting'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Bee.h(55,18): warning C4820: 'Bee': '4' bytes padding added after data member 'Bee::PI'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Bee.h(74,1): warning C4820: 'Bee': '4' bytes padding added after data member 'Bee::lifespan'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Bee.h(74,1): warning C4625: 'Bee': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Bee.h(74,1): warning C4626: 'Bee': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Bee.h(9,3): warning C4265: 'Bee': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Bees.h(21,1): warning C4625: 'Bees': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Bees.h(21,1): warning C4626: 'Bees': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Bees.h(10,3): warning C4265: 'Bees': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Foodsources.h(21,1): warning C4625: 'Foodsources': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Foodsources.h(21,1): warning C4626: 'Foodsources': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Foodsources.h(10,3): warning C4265: 'Foodsources': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Node.h(26,21): warning C4820: 'Node': '4' bytes padding added after data member 'Node::size'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Node.h(28,1): warning C4625: 'Node': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Node.h(28,1): warning C4626: 'Node': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Node.h(9,3): warning C4265: 'Node': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Node.h(11,28): warning C4100: 'time': unreferenced formal parameter
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Grid.h(26,1): warning C4820: 'Grid': '7' bytes padding added after data member 'Grid::visible'
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Grid.h(26,1): warning C4625: 'Grid': copy constructor was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Grid.h(26,1): warning C4626: 'Grid': assignment operator was implicitly defined as deleted
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Grid.h(16,3): warning C4265: 'Grid': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Grid.h(18,28): warning C4100: 'time': unreferenced formal parameter
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\artificial-bee-colony-simulator\Main.cpp(7,29): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\artificial-bee-colony-simulator\Main.cpp(61,14): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(53,5): warning C4514: 'sf::NonCopyable::NonCopyable': unreferenced inline function has been removed
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\System\NonCopyable.hpp(63,6): warning C4514: 'sf::NonCopyable::~NonCopyable': unreferenced inline function has been removed
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\Glyph.hpp(49,5): warning C4514: 'sf::Glyph::Glyph': unreferenced inline function has been removed
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\External\x64\SFML-2.5.1\include\SFML\Graphics\Font.hpp(274,9): warning C4514: 'sf::Font::Row::Row': unreferenced inline function has been removed
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\Library\Base.h(5,2): warning C4514: 'Base::Base': unreferenced inline function has been removed
 D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xthreads.h(44,30): warning C5264: '_Mtx_internal_imp_alignment': 'const' variable is not used
 D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xthreads.h(45,30): warning C5264: '_Cnd_internal_imp_size': 'const' variable is not used
 D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\xthreads.h(43,30): warning C5264: '_Mtx_internal_imp_size': 'const' variable is not used
@@ -279,4 +280,4 @@ sfml-system-s.lib(Err.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLi
 sfml-system-s.lib(ThreadLocal.cpp.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Main.obj
 sfml-system-s.lib(ThreadLocal.cpp.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in Main.obj
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-D:\Documents\Github\artificial-bee-colony-simulator\x64\Debug\artificial-bee-colony-simulator.exe : fatal error LNK1319: 78 mismatches detected
+C:\Users\Owner\OneDrive\Documents\Programming\abcs-new\x64\Debug\artificial-bee-colony-simulator.exe : fatal error LNK1319: 78 mismatches detected

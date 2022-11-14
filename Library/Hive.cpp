@@ -4,8 +4,8 @@
 #include "Grid.h"
 #include "Foodsource.h"
 #include "Onlooker.h"
-const float Hive::WIDTH{ 10.0F };
-const float Hive::HEIGHT{ 10.0F };
+const float Hive::WIDTH{ 100.0F };
+const float Hive::HEIGHT{ 100.0F };
 const float Hive::DANCE_DURATION{ 0.05F / TIME_SCALING };
 const float Hive::NO_ATTACK_CHANCE{ 12000 / TIME_SCALING };
 const float Hive::FOOD_PENALTY{ 0.90F };

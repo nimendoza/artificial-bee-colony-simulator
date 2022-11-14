@@ -4,9 +4,9 @@
 
 std::default_random_engine generator;
 std::normal_distribution<double> distribution(11.0, 5.0);
-const float Larva::EMERGE_TIME_QUEEN{ 24 * distribution(generator) / TIME_SCALING };
-const float Larva::EMERGE_TIME_DRONE{ 24 * distribution(generator) / TIME_SCALING };
-const float Larva::EMERGE_TIME_WORKER{ 24 * distribution(generator) / TIME_SCALING };
+const float Larva::EMERGE_TIME_QUEEN( 24 * distribution(generator) / TIME_SCALING );
+const float Larva::EMERGE_TIME_DRONE( 24 * distribution(generator) / TIME_SCALING );
+const float Larva::EMERGE_TIME_WORKER( 24 * distribution(generator) / TIME_SCALING );
 
 Larva::Larva(const Point& position, Hive& hive, const BeeType& type) : Bee(position, hive, LarvaBee), type{ type } {
 	body.setFillColor(Color::White);

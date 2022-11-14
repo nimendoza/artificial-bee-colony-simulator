@@ -42,6 +42,12 @@ void Employee::populate() {
 				else {
 					Bee::update(newPosition, rotationR);
 				}
+
+				if (distance(goal, position) <= TARGET_RADIUS) {
+					dance();
+					state = Harvesting;
+					harvestTimer.restart();
+				}
 			}
 		} else {
 			state = Idle;
@@ -119,6 +125,8 @@ void Employee::populate() {
 				if (!foodsource->viable()) {
 					hive.remove(foodsource);
 					foodsource = nullptr;
+				} else {
+					dance();
 				}
 
 				state = (foodsource == nullptr) ? Scouting : Travelling;
@@ -127,6 +135,7 @@ void Employee::populate() {
 	};
 }
 void Employee::dance() const {
+	std::cout << "Dance start!\n";
 	hive.dance();
 }
 void Employee::getTarget() {
