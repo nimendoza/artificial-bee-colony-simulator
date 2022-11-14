@@ -6,7 +6,7 @@ Fonts* Fonts::instance = nullptr;
 
 Fonts::Fonts() {
 	// CHANGE THIS
-	std::string directory = "C:/Users/Owner/OneDrive/Documents/Programming/artificial-bee-colony-simulator";
+	std::string directory = "C:/Users/rafae/Downloads/bee simulator/artificial-bee-colony-simulator";
 
 	std::stringstream input;
 	input << directory << "/External/cour.ttf";

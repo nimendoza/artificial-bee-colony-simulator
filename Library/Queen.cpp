@@ -2,7 +2,7 @@
 #include "Queen.h"
 #include "Bees.h"
 const float Queen::EGG_LAYING_INTERVAL{ 1.0F / TIME_SCALING };
-const float Queen::MAX_EGGS_LAID{ 125.0F };
+const float Queen::MAX_EGGS_LAID{ 3000.0F };
 
 Queen::Queen(const Point& position, Hive& hive) : Bee(position, hive, QueenBee) {
 	body.setFillColor(Color::Magenta);
@@ -34,10 +34,10 @@ void Queen::populate() {
 				Bees::get()->spawn(position, hive, QueenBee);
 			}
 
-			std::uniform_int_distribution<int> distribution(0, int(MAX_EGGS_LAID));
+			std::normal_distribution<int> distribution(0, int(MAX_EGGS_LAID));
 			int count{ distribution(engine) };
 			for (int i{}; i < count; i++) {
-				std::discrete_distribution<int> distribution_type{ 75, 9, 1, 17, 0 };
+				std::discrete_distribution<int> distribution_type{ 70, 10, 15, 5, 0 };
 				switch (distribution_type(engine)) {
 				case 0:
 					Bees::get()->spawn(position, hive, EggBee, OnlookerBee);

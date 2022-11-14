@@ -25,7 +25,7 @@ int main() {
 	window.setVisible(rendering);
 
 	// CHANGE THIS
-	std::string directory = "C:/Users/Owner/OneDrive/Documents/Programming/artificial-bee-colony-simulator";
+	std::string directory = "C:/Users/rafae/Downloads/bee simulator/artificial-bee-colony-simulator";
 
 	std::stringstream outputPath;
 	outputPath << directory << "/Utilities/Output 0.txt";
