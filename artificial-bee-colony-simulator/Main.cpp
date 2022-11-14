@@ -4,20 +4,20 @@
 #include "Foodsources.h"
 #include "Grid.h"
 #include "pch.h"
-const int TICKS(24 * 30 * 3 / TIME_SCALING);
+const int TICKS(24 * 30 * 9 / TIME_SCALING);
 const float CAMERA_SPEED{ 300.0F };
 
 int main() {
 	// TOGGLE FROM DEBUG TO RELEASE
 
-	bool rendering = false;
+	bool rendering = true;
 	bool running = true;
 
 	sf::ContextSettings settings;
 	settings.antialiasingLevel = 20;
 
 	Point camera(0, 0);
-	float zoom{ 1.00F };
+	float zoom{ 1.0F };
 	sf::View view(sf::FloatRect(0, 0, 800, 600));
 	view.zoom(zoom);
 
@@ -42,7 +42,7 @@ int main() {
 		<< "[Eggs]" << '\n';
 
 	std::stringstream inputPath;
-	inputPath << directory << "/Utilities/Map 0.txt";
+	inputPath << directory << "/Utilities/Map 1.txt";
 	World::get()->generate(inputPath.str());
 
 	view.setCenter(Hives::get()->list[0]->center);

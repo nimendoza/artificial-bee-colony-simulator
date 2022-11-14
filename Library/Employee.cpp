@@ -117,6 +117,7 @@ void Employee::dance() const {
 	hive.dance();
 }
 void Employee::getTarget() {
+	Foodsources::get()->sort(&hive);
 	auto food = Foodsources::get()->list;
 	std::sort(begin(food), end(food), [&](Foodsource* const a, Foodsource* const b) {
 		return distance(hive.center, a->center) < distance(hive.center, b->center);

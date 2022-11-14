@@ -8,7 +8,7 @@ const float TOTAL_HOURS{ 24.0F / TIME_SCALING };
 
 const float Bee::CARRYING_CAPACITY{ 10.0F };
 const float Bee::SPEED{ 100.0F * TIME_SCALING };
-const float Bee::BODY_RADIUS{ 10.0F };
+const float Bee::BODY_RADIUS{ 5.0F };
 const float Bee::TARGET_RADIUS{ 10.0F };
 const float Bee::HARVESTING_DURATION{ 0.1F / TIME_SCALING };
 const float Bee::WORK_DURATION{ 16.0F / TIME_SCALING };
@@ -39,7 +39,7 @@ Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(positi
 	body.setPointCount(360);
 	body.setFillColor(STANDARD_BODY_COLOR);
 	body.setOutlineColor(ALERT_COLOR);
-	body.setOutlineThickness(-2);
+	body.setOutlineThickness(-1);
 	body.setPosition(position - Point(BODY_RADIUS, BODY_RADIUS));
 
 	face.setFillColor(NORMAL_COLOR);

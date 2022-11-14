@@ -12,6 +12,8 @@ public:
 	void update(const double& time) override;
 	void render(Window& window) override;
 	void spawn(const Point& position);
+	void sort(Hive* hive);
+	Hive* current;
 
 	static Foodsources* get();
 

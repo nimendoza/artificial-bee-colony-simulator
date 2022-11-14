@@ -27,5 +27,8 @@
     <Text Include="Output 0.txt">
       <Filter>Output</Filter>
     </Text>
+    <Text Include="Map 1.txt">
+      <Filter>Input</Filter>
+    </Text>
   </ItemGroup>
 </Project>

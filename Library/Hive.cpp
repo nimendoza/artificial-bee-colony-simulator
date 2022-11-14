@@ -4,18 +4,18 @@
 #include "Grid.h"
 #include "Foodsource.h"
 #include "Onlooker.h"
-const float Hive::WIDTH{ 200.0F };
-const float Hive::HEIGHT{ 200.0F };
+const float Hive::WIDTH{ 10.0F };
+const float Hive::HEIGHT{ 10.0F };
 const float Hive::DANCE_DURATION{ 0.05F / TIME_SCALING };
 
 Hive::Hive(const Point& position) : Entity(position, Color::White, Color::Yellow), dimensions(WIDTH, HEIGHT), body(dimensions), food{}, count{}, idles{}, data{}, text(), center(position.x + WIDTH / float(2), position.y + HEIGHT / float(2)), dancing(false) {
 	body.setPosition(position);
-	body.setOutlineThickness(-10);
+	body.setOutlineThickness(-1);
 	body.setOutlineColor(outline);
 	body.setFillColor(fill);
 
-	text.setPosition(position + Point(10, 10));
-	text.setCharacterSize(16);
+	text.setPosition(position + Point(1, 1));
+	text.setCharacterSize(5);
 	text.setOutlineColor(Color::White);
 }
 
