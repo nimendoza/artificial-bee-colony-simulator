@@ -17,22 +17,22 @@ D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(31,46):
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(46,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(52,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(47,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(53,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(75,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(87,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(76,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+D:\Documents\Github\artificial-bee-colony-simulator\Library\Employee.cpp(88,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
@@ -89,12 +89,12 @@ D:\Documents\Github\artificial-bee-colony-simulator\Library\Onlooker.cpp(31,45):
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Onlooker.cpp(59,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+D:\Documents\Github\artificial-bee-colony-simulator\Library\Onlooker.cpp(65,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Documents\Github\artificial-bee-colony-simulator\Library\Onlooker.cpp(60,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
+D:\Documents\Github\artificial-bee-colony-simulator\Library\Onlooker.cpp(66,45): warning C4244: '+=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float

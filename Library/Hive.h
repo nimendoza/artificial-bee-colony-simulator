@@ -8,7 +8,7 @@ public:
 
 	void update(const double& time) override;
 	void render(Window& window) override;
-	void remove(class Onlooker* const bee);
+	void remove(class Bee* const bee);
 	void remove(class Foodsource* const foodsource);
 	float remove(float food);
 	void add(class Onlooker* const bee);
@@ -23,7 +23,7 @@ public:
 	Point dimensions;
 	Point center;
 	std::map<BeeType, int> count;
-	std::vector<class Onlooker*> idles;
+	std::vector<class Bee*> idles;
 	std::map<class Foodsource* const, std::pair<float*, float>> data;
 	float food;
 private:

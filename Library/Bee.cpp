@@ -14,7 +14,7 @@ const float Bee::HARVESTING_DURATION{ 0.1F / TIME_SCALING };
 const float Bee::WORK_DURATION{ 16.0F / TIME_SCALING };
 const float Bee::REST_DURATION{ 8.0F / TIME_SCALING };
 const float Bee::EXTRACTION_YIELD{ 10.0F };
-const float Bee::MAX_ENERGY{ 50.0F };
+const float Bee::MAX_ENERGY{ 50.0F * TIME_SCALING };
 const float Bee::FATIGUE_PENALTY{ 24.0F * TIME_SCALING };
 const float Bee::ENERGY_CONSUMPTION_RATE{ 1.0F * TIME_SCALING };
 const std::map<const BeeType, float> Bee::LIFESPAN{
@@ -53,17 +53,17 @@ Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(positi
 	
 	goal = hive.center;
 	
-	speed = std::normal_distribution<float>(SPEED, 10.0F * 4)(engine);
-	harvestDuration = std::normal_distribution<float>(HARVESTING_DURATION, 0.05F / 4)(engine);
-	workDuration = std::normal_distribution<float>(WORK_DURATION, 1.0F / 4)(engine);
+	speed = std::normal_distribution<float>(SPEED, 10.0F / TIME_SCALING)(engine);
+	harvestDuration = std::normal_distribution<float>(HARVESTING_DURATION, 0.05F / TIME_SCALING)(engine);
+	workDuration = std::normal_distribution<float>(WORK_DURATION, 1.0F / TIME_SCALING)(engine);
 	restDuration = TOTAL_HOURS - workDuration;
-	maxEnergy = std::normal_distribution<float>(MAX_ENERGY, 20.0F)(engine);
+	maxEnergy = std::normal_distribution<float>(MAX_ENERGY, 20.0F * TIME_SCALING)(engine);
 	energy = maxEnergy;
-	energyConsumptionRate = std::normal_distribution<float>(ENERGY_CONSUMPTION_RATE, 1.0F / 4.0F)(engine);
-	fatiguePenalty = std::normal_distribution<float>(FATIGUE_PENALTY, 1.0F / 4)(engine);
-	extractionYield = std::normal_distribution<float>(EXTRACTION_YIELD, 3.0F * 4)(engine);
+	energyConsumptionRate = std::normal_distribution<float>(ENERGY_CONSUMPTION_RATE, 1.0F / TIME_SCALING)(engine);
+	fatiguePenalty = std::normal_distribution<float>(FATIGUE_PENALTY, 1.0F / TIME_SCALING)(engine);
+	extractionYield = std::normal_distribution<float>(EXTRACTION_YIELD, 3.0F * TIME_SCALING)(engine);
 	food = 0;
-	lifespan = std::normal_distribution<float>(LIFESPAN.at(type), 24.0F / 4)(engine);
+	lifespan = std::normal_distribution<float>(LIFESPAN.at(type), 24.0F / TIME_SCALING)(engine);
 
 	resting = false;
 }

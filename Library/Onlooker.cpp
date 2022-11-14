@@ -29,7 +29,13 @@ void Onlooker::populate() {
 			float rotationR{ atan2(goal.y - position.y, goal.x - position.x) };
 			newPosition.x += (cos(rotationR) * speed * time);
 			newPosition.y += (sin(rotationR) * speed * time);
-			Bee::update(newPosition, rotationR);
+
+			if (distance(newPosition, position) > distance(goal, position)) {
+				Bee::update(goal, rotationR);
+			}
+			else {
+				Bee::update(newPosition, rotationR);
+			}
 		}
 	};
 
@@ -58,7 +64,13 @@ void Onlooker::populate() {
 			float rotationR{ atan2(goal.y - position.y, goal.x - position.x) };
 			newPosition.x += (cos(rotationR) * speed * time);
 			newPosition.y += (sin(rotationR) * speed * time);
-			Bee::update(newPosition, rotationR);
+
+			if (distance(newPosition, position) > distance(goal, position)) {
+				Bee::update(goal, rotationR);
+			}
+			else {
+				Bee::update(newPosition, rotationR);
+			}
 		}
 	};
 

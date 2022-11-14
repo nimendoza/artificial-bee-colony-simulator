@@ -46,6 +46,8 @@ void Hive::update(const double& time) {
 			return lhs.second > rhs.second;
 			});
 
+		validate();
+
 		int count{};
 		for (auto i{ begin(idles) }; i != end(idles); i++) {
 			std::vector<int> w(weights.size());
@@ -108,7 +110,7 @@ float Hive::compute(const std::pair<float*, float>& foodData,
 	}
 	return result;
 }
-void Hive::remove(Onlooker* const bee) {
+void Hive::remove(Bee* const bee) {
 	for (auto i{ begin(idles) }; i != end(idles); i++) {
 		if (*i == bee) {
 			idles.erase(i);

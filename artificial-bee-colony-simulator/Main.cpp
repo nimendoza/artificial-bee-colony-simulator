@@ -4,7 +4,7 @@
 #include "Foodsources.h"
 #include "Grid.h"
 #include "pch.h"
-const int TICKS(24 * 30 * 4 / TIME_SCALING);
+const int TICKS(24 * 30 * 3 / TIME_SCALING);
 const float CAMERA_SPEED{ 300.0F };
 
 int main() {
@@ -57,8 +57,8 @@ int main() {
 
 		if (running) {
 			double time = clock.restart().asSeconds();
-			Hives::get()->update(time);
 			Bees::get()->update(time);
+			Hives::get()->update(time);
 			Foodsources::get()->update(time);
 
 			int count{ 1 };
