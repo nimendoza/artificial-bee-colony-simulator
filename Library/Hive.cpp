@@ -73,7 +73,7 @@ void Hive::update(const double& time) {
 		dancing = false;
 	}
 
-	std::discrete_distribution<int> attack{ NO_ATTACK_CHANCE, 1 };
+	std::discrete_distribution<int> attack{ NO_ATTACK_CHANCE, 0 };
 	if (attack(engine)) {
 		std::cout << "An attack happened!\n";
 

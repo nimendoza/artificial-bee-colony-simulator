@@ -30,7 +30,7 @@ const Color Bee::STANDARD_BODY_COLOR{ Color::Yellow };
 const Color Bee::NORMAL_COLOR{ Color::White };
 const Color Bee::ALERT_COLOR{ Color::Red };
 
-double infection_chance = 100;
+double infection_chance = 0;
 
 Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(position, NORMAL_COLOR, ALERT_COLOR), hive{ hive }, foodsource(nullptr), body(BODY_RADIUS), face(Point(BODY_RADIUS, 2)) {
 	std::random_device device;
