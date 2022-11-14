@@ -60,6 +60,7 @@ int main() {
 			Hives::get()->update(time);
 			clock.restart();
 			master += time;
+			std::cout << "Time left: " << TICKS - master << " seconds.\n";
 
 			Bees::get()->update(time);
 			Foodsources::get()->update(time);
