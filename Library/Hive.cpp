@@ -20,7 +20,7 @@ Hive::Hive(const Point& position) : Entity(position, Color::White, Color::Yellow
 }
 
 void Hive::update(const double& time) {
-	if (dancing && danceTimer.getElapsedTime().asSeconds() > DANCE_DURATION && data.size()) {
+	if (dancing && danceTimer.getElapsedTime().asSeconds() > DANCE_DURATION) {
 		std::vector<std::pair<Foodsource*, float>> weights{};
 		float sum{};
 		float minY{ *begin(data)->second.first };
@@ -45,8 +45,6 @@ void Hive::update(const double& time) {
 		std::sort(begin(weights), end(weights), [](const std::pair<Foodsource* const, float>& lhs, const std::pair<Foodsource* const, float>& rhs) {
 			return lhs.second > rhs.second;
 			});
-
-		validate();
 
 		int count{};
 		for (auto i{ begin(idles) }; i != end(idles); i++) {
@@ -80,10 +78,8 @@ void Hive::update(const double& time) {
 	}
 }
 void Hive::dance() {
-	if (data.size()) {
-		dancing = true;
-		danceTimer.restart();
-	}
+	dancing = true;
+	danceTimer.restart();
 }
 float Hive::compute(const std::pair<float*, float>& foodData,
 	const float& minYield, const float& maxYield,
