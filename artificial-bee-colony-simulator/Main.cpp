@@ -10,7 +10,7 @@ const float CAMERA_SPEED{ 300.0F };
 int main() {
 	// TOGGLE FROM DEBUG TO RELEASE
 
-	bool rendering = true;
+	bool rendering = false;
 	bool running = true;
 
 	sf::ContextSettings settings;
@@ -49,8 +49,8 @@ int main() {
 
 	sf::Clock views; views.restart();
 	sf::Clock clock; clock.restart();
-	sf::Clock master; master.restart();
-	while (master.getElapsedTime().asSeconds() <= TICKS) {
+	float master = 0;
+	while (master <= TICKS) {
 		if (rendering && !window.isOpen()) {
 			break;
 		}
@@ -59,6 +59,7 @@ int main() {
 			double time = clock.restart().asSeconds();
 			Hives::get()->update(time);
 			clock.restart();
+			master += time;
 
 			Bees::get()->update(time);
 			Foodsources::get()->update(time);
