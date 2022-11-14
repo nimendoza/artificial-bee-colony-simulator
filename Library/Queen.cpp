@@ -34,8 +34,8 @@ void Queen::populate() {
 				Bees::get()->spawn(position, hive, QueenBee);
 			}
 
-			std::normal_distribution<int> distribution(0, int(MAX_EGGS_LAID));
-			int count{ distribution(engine) };
+			std::normal_distribution<float> distribution(0, int(MAX_EGGS_LAID));
+			int count( distribution(engine) );
 			for (int i{}; i < count; i++) {
 				std::discrete_distribution<int> distribution_type{ 70, 10, 15, 5, 0 };
 				switch (distribution_type(engine)) {
