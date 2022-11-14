@@ -57,9 +57,11 @@ int main() {
 
 		if (running) {
 			double time = clock.restart().asSeconds();
+			Hives::get()->update(time);
+			clock.restart();
+
 			Bees::get()->update(time);
 			Foodsources::get()->update(time);
-			Hives::get()->update(time);
 
 			int count{ 1 };
 			for (auto i{ Hives::get()->list.begin() }; i != Hives::get()->list.end(); i++, count++) {
@@ -74,7 +76,6 @@ int main() {
 					<< (*i)->count[EggBee] << '\n';
 			}
 
-			clock.restart();
 		}
 
 		if (rendering) {

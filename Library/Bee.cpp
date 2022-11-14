@@ -30,7 +30,7 @@ const Color Bee::STANDARD_BODY_COLOR{ Color::Yellow };
 const Color Bee::NORMAL_COLOR{ Color::White };
 const Color Bee::ALERT_COLOR{ Color::Red };
 
-double pesticide_chance = 30;
+double infection_chance = 100;
 
 Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(position, NORMAL_COLOR, ALERT_COLOR), hive{ hive }, foodsource(nullptr), body(BODY_RADIUS), face(Point(BODY_RADIUS, 2)) {
 	std::random_device device;
@@ -65,8 +65,7 @@ Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(positi
 	fatiguePenalty = std::normal_distribution<float>(FATIGUE_PENALTY, 1.0F / TIME_SCALING)(engine);
 	extractionYield = std::normal_distribution<float>(EXTRACTION_YIELD, 3.0F * TIME_SCALING)(engine);
 	food = 0;
-	lifespan = std::normal_distribution<float>(LIFESPAN.at(type), 24.0F / TIME_SCALING)(engine);
-
+	lifespan = std::normal_distribution<float>((LIFESPAN.at(type) / std::discrete_distribution<int>{0, 100, infection_chance}(engine)), 24.0F / TIME_SCALING)(engine);
 	resting = false;
 }
 
