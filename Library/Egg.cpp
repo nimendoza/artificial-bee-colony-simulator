@@ -17,6 +17,10 @@ Egg::Egg(const Point& position, Hive& hive, const BeeType& type) : Bee(position,
 
 void Egg::update(const double& time) {
 	updateWhen[state](time);
+	if (forDeletion) {
+		hive.count[mytype]--;
+		hive.count[AllBeeTypes]--;
+	}
 }
 void Egg::populate() {
 	updateWhen[Idle] = [&](const double& time) {
@@ -47,5 +51,4 @@ void Egg::populate() {
 }
 void Egg::hatch() {
 	forDeletion = true;
-	Bees::get()->spawn(position, hive, LarvaBee, type);
 }

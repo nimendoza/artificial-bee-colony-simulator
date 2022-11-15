@@ -6,6 +6,7 @@ Onlooker::Onlooker(const Point& point, Hive& hive) : Bee(position, hive, Onlooke
 	setPosition(hive.center);
 
 	state = Idle;
+	hive.add(this);
 
 	Onlooker::populate();
 }
@@ -49,9 +50,9 @@ void Onlooker::populate() {
 	updateWhen[Harvesting] = [&](const double& time) {
 		if (harvestTimer.getElapsedTime().asSeconds() >= harvestDuration) {
 
-			std::discrete_distribution<int> poison{ 100 - pesticide_chance, pesticide_chance * pow(0.5, time/40) };
+			std::discrete_distribution<int> poison{ 100 - pesticide_chance, pesticide_chance /* * pow(0.5, time / 40) */};
 			if (poison(engine)) {
-				std::cout << "A bee died to pesticides\n";
+				// std::cout << "An onlooker bee died to pesticides\n";
 				forDeletion = true;
 			}
 

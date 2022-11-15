@@ -72,7 +72,7 @@ void Employee::populate() {
 	updateWhen[Harvesting] = [&](const double& time) {
 		std::discrete_distribution<int> poison{ 100 - pesticide_chance, pesticide_chance * pow(0.5, (int(time) % 40) / 40) };
 		if (poison(engine)) {
-			std::cout << "A bee died to pesticides\n";
+			// std::cout << "A bee died to pesticides\n";
 			forDeletion = true;
 		}
 
@@ -85,6 +85,7 @@ void Employee::populate() {
 			} else {
 				harvest(foodsource->remove(extractionYield));
 			}
+			dance();
 			state = Delivering;
 		}
 	};
@@ -131,6 +132,7 @@ void Employee::populate() {
 	};
 }
 void Employee::dance() const {
+	// std::cout << "Dance start!\n";
 	hive.dance();
 }
 void Employee::getTarget() {

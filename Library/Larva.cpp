@@ -8,8 +8,10 @@ const float Larva::EMERGE_TIME_QUEEN{ 24 * distribution(generator) / TIME_SCALIN
 const float Larva::EMERGE_TIME_DRONE{ 24 * distribution(generator) / TIME_SCALING };
 const float Larva::EMERGE_TIME_WORKER{ 24 * distribution(generator) / TIME_SCALING };
 
-Larva::Larva(const Point& position, Hive& hive, const BeeType& type) : Bee(position, hive, LarvaBee), type{ type } {
+Larva::Larva(const Point& position, Hive& hive, const BeeType& type) : Bee(position, hive, LarvaBee) {
 	body.setFillColor(Color::White);
+
+	this->type = type;
 
 	energyConsumptionRate /= 2;
 
@@ -60,5 +62,4 @@ void Larva::populate() {
 }
 void Larva::develop() {
 	forDeletion = true;
-	Bees::get()->spawn(position, hive, type);
 }

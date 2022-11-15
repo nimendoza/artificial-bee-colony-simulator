@@ -14,5 +14,4 @@ private:
 
 	sf::Clock emerge;
 	float emergesIn;
-	BeeType type;
 };

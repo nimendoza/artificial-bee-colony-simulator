@@ -23,7 +23,7 @@ Hive::Hive(const Point& position) : Entity(position, Color::White, Color::Yellow
 }
 
 void Hive::update(const double& time) {
-	if (dancing && danceTimer.getElapsedTime().asSeconds() >= DANCE_DURATION) {
+	if (dancing) {
 		std::vector<std::pair<Foodsource*, float>> weights{};
 		float sum{};
 		float minY{ *begin(data)->second.first };
@@ -70,7 +70,8 @@ void Hive::update(const double& time) {
 	}
 
 	//PREDATORS
-	std::discrete_distribution<int> attack{ 100, 0 };
+	double a = 0;
+	std::discrete_distribution<int> attack{ 100 - a, a };
 	if (attack(engine)) {
 		std::cout << "An attack happened!\n";
 

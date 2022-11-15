@@ -13,6 +13,5 @@ private:
 	void hatch();
 
 	sf::Clock hatching;
-	BeeType type;
 	float incubation;
 };

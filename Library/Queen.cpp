@@ -30,6 +30,7 @@ void Queen::populate() {
 				Bees::get()->spawn(position, hive, GuardBee);
 			}
 
+
 			if (forDeletion) {
 				Bees::get()->spawn(position, hive, QueenBee);
 				Bees::get()->cleanup();

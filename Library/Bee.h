@@ -8,6 +8,8 @@ public:
 	explicit Bee(const Point& point, Hive& hive, const BeeType& type);
 	~Bee() = default;
 
+	BeeType mytype;
+
 	void update(const double& time) override;
 	void update(const Point& position, const float& rotationR);
 	void render(Window& window) override;
@@ -40,7 +42,9 @@ public:
 
 	Hive& hive;
 	BeeState state;
+	Foodsource* foodsource;
 	bool resting;
+	BeeType type;
 protected:
 	using updateCallback = std::function<void(const double&)>;
 
@@ -50,6 +54,7 @@ protected:
 
 	std::map<BeeState, updateCallback> updateWhen;
 
+
 	const float PI{ 3.14159265259F };
 
 	sf::CircleShape body;
@@ -58,7 +63,6 @@ protected:
 	sf::Clock rest;
 	sf::Clock work;
 	sf::Clock life;
-	Foodsource* foodsource;
 	Point goal;
 	float speed;
 	float harvestDuration;

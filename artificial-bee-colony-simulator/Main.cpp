@@ -10,7 +10,7 @@ const float CAMERA_SPEED{ 300.0F };
 int main() {
 	// TOGGLE FROM DEBUG TO RELEASE
 
-	bool rendering = true;
+	bool rendering = false;
 	bool running = true;
 
 	sf::ContextSettings settings;

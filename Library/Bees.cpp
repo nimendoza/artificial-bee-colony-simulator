@@ -79,16 +79,20 @@ void Bees::cleanup() {
 			removed = false;
 			for (auto i{ begin(list[beeType]) }; i != end(list[beeType]); i++) {
 				if ((*i)->forDeletion) {
-					(*i)->hive.count[beeType]--;
-					(*i)->hive.count[AllBeeTypes]--;
-					if (beeType == OnlookerBee || beeType == EmployeeBee) {
-						(*i)->hive.count[ForagerBee]--;
-					}
 					if (beeType == OnlookerBee) {
 						(*i)->hive.remove((*i));
 					}
+					if (beeType == EmployeeBee && (*i)->foodsource != nullptr) {
+						(*i)->hive.remove((*i)->foodsource);
+					}
 					if (beeType == GuardBee) {
 						(*i)->hive.remove((*i));
+					}
+					if (beeType == EggBee) {
+						spawn((*i)->position, (*i)->hive, LarvaBee, (*i)->type);
+					}
+					if (beeType == LarvaBee) {
+						spawn((*i)->position, (*i)->hive, (*i)->type);
 					}
 					delete (*i);
 					list[beeType].erase(i);

@@ -39,6 +39,10 @@ Bee::Bee(const Point& position, Hive& hive, const BeeType& type) : Entity(positi
 	std::random_device device;
 	engine = std::default_random_engine(device());
 	
+	mytype = type;
+
+	this->type = AllBeeTypes;
+
 	state = Idle;
 
 	body.setPointCount(360);
@@ -137,6 +141,13 @@ void Bee::update(const double& time) {
 	}
 
 	updateWhen[state](time);
+	if (forDeletion) {
+		hive.count[mytype]--;
+		hive.count[AllBeeTypes]--;
+		if (mytype == OnlookerBee || mytype == EmployeeBee) {
+			hive.count[ForagerBee]--;
+		}
+	}
 }
 void Bee::update(const Point& position, const float& rotationR) {
 	Entity::setPosition(position);
