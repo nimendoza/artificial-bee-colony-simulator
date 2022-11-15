@@ -8,8 +8,7 @@ const float Hive::WIDTH{ 100.0F };
 const float Hive::HEIGHT{ 100.0F };
 const float Hive::DANCE_DURATION{ 0.05F / TIME_SCALING };
 //const float Hive::NO_ATTACK_CHANCE{ 12000 / TIME_SCALING };
-const float Hive::FOOD_PENALTY{ 0.80F };
-const int Hive::GUARD_PENALTY{ 100 };
+const float Hive::PENALTY{ 0.30F };
 
 Hive::Hive(const Point& position) : Entity(position, Color::White, Color::Yellow), guards{}, dimensions(WIDTH, HEIGHT), body(dimensions), food{}, count{}, idles{}, data{}, text(), center(position.x + WIDTH / float(2), position.y + HEIGHT / float(2)), dancing(false) {
 	body.setPosition(position);
@@ -23,6 +22,25 @@ Hive::Hive(const Point& position) : Entity(position, Color::White, Color::Yellow
 }
 
 void Hive::update(const double& time) {
+	//PREDATORS
+	double a = 35;
+	std::discrete_distribution<int> attack{ 100 - a, a };
+	if (attack(engine)) {
+		std::cout << "An attack happened!\n";
+
+		food *= (1 - PENALTY);
+
+		int c = count[GuardBee] * PENALTY;
+		for (auto i{ begin(guards) }; i != end(guards) && c; c--, i++) {
+			(*i)->forDeletion = true;
+		}
+
+		c = idles.size() * PENALTY;
+		for (auto i{ begin(idles) }; i != end(idles) && c; c--, i++) {
+			(*i)->forDeletion = true;
+		}
+	}
+
 	if (dancing) {
 		std::vector<std::pair<Foodsource*, float>> weights{};
 		float sum{};
@@ -57,11 +75,12 @@ void Hive::update(const double& time) {
 
 		int count{};
 		for (auto i{ begin(idles) }; i != end(idles); i++) {
-
-			int roll{ distribution(engine) };
-			(*i)->target(weights[roll].first);
-			(*i)->state = Travelling;
-			count++;
+			if (!(*i)->forDeletion) {
+				int roll{ distribution(engine) };
+				(*i)->target(weights[roll].first);
+				(*i)->state = Travelling;
+				count++;
+			}
 		}
 		std::cout << count << '\n';
 
@@ -69,19 +88,6 @@ void Hive::update(const double& time) {
 		dancing = false;
 	}
 
-	//PREDATORS
-	double a = 0;
-	std::discrete_distribution<int> attack{ 100 - a, a };
-	if (attack(engine)) {
-		std::cout << "An attack happened!\n";
-
-		food *= FOOD_PENALTY;
-
-		int count = GUARD_PENALTY;
-		for (auto i{ begin(guards) }; i != end(guards) && count; count--, i++) {
-			(*i)->forDeletion = true;
-		}
-	}
 
 	if (node != nullptr && !node->contains(position)) {
 		node->remove(this);

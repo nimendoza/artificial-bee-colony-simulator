@@ -20,8 +20,7 @@ public:
 	static const float HEIGHT;
 	static const float DANCE_DURATION;
 	static const float NO_ATTACK_CHANCE;
-	static const float FOOD_PENALTY;
-	static const int GUARD_PENALTY;
+	static const float PENALTY;
 	
 	Point dimensions;
 	Point center;

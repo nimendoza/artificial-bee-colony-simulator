@@ -65,6 +65,8 @@ C:\Users\rafae\Downloads\bee simulator\artificial-bee-colony-simulator\Library\G
           ]
   Guard.cpp
   Hive.cpp
+C:\Users\rafae\Downloads\bee simulator\artificial-bee-colony-simulator\Library\Hive.cpp(33,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\rafae\Downloads\bee simulator\artificial-bee-colony-simulator\Library\Hive.cpp(38,20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   Hives.cpp
   Larva.cpp
   Node.cpp
