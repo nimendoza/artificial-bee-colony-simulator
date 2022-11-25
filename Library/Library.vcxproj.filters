@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Precompiled Headers">
+      <UniqueIdentifier>{757e0ea0-588c-410e-a5f0-8da2f73c8840}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities">
+      <UniqueIdentifier>{075f8331-1728-4931-8718-69b6c8770693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Base">
+      <UniqueIdentifier>{f40c4055-76d0-4f3d-ba24-43b54d5ab4f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Entity">
+      <UniqueIdentifier>{51d53ff9-2387-49b9-b8f7-6affb9a1db3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Bees">
+      <UniqueIdentifier>{15c9a297-900c-4c74-9f5b-dd5d1b10d9b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers">
+      <UniqueIdentifier>{be23d52d-f094-472d-8133-ed38ae26936e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers\Font">
+      <UniqueIdentifier>{fbd3923e-8ecd-42a4-ad50-961e8917ba3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Structures">
+      <UniqueIdentifier>{d24328a2-3f51-4371-97fc-9487b259ce90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Structures\Hive">
+      <UniqueIdentifier>{94410eb4-b42d-47bc-b60e-e405e1908206}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Base.h">
+      <Filter>Entities\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Entities\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="BeeType.h">
+      <Filter>Entities\Bees</Filter>
+    </ClInclude>
+    <ClInclude Include="Fonts.h">
+      <Filter>Managers\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Hive.h">
+      <Filter>Structures\Hive</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Precompiled Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Entities\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Fonts.cpp">
+      <Filter>Managers\Font</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
