@@ -4,6 +4,12 @@
 
 1. Install and open Visual Studio
 
-2. Switch from "Debug" to "Release"
+2. Select the `artificial-bee-colony-simulator.sln` file to open the project
 
-3. Build and run the program
+3. Switch from "Debug" to "Release"
+
+![](images/switch-debug-release.png)
+
+4. Build and run the program
+
+![](images/build.png)

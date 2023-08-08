@@ -10,7 +10,7 @@ const float CAMERA_SPEED{ 300.0F };
 int main() {
 	// TOGGLE FROM DEBUG TO RELEASE
 
-	bool rendering = false;
+	bool rendering = true;
 	bool running = true;
 
 	sf::ContextSettings settings;
@@ -24,7 +24,6 @@ int main() {
 	Window window(sf::VideoMode(800, 600), "Artificial Bee Colony Simulator", sf::Style::Default);
 	window.setVisible(rendering);
 
-	// CHANGE THIS
 	std::string directory = "..";
 
 	std::stringstream outputPath;
